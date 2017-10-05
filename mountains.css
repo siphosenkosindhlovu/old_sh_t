@@ -1,0 +1,264 @@
+header.container-fluid {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+@keyframes rain {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(600px);
+  }
+}
+
+.frame {
+  position: absolute;
+  background: rgb(68, 219, 219);
+  /*background: -webkit-linear-gradient(top right,#FFFC00, #5ADEF9, #5ADEF9, #5ADEF9);*/
+  /*padding: 100px;*/
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.weather_frame {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 4em;
+  z-index: 10000000000;
+  display: none;
+}
+
+.weather_frame div:nth-child(3) {
+  font-size: 0.5em;
+}
+
+.sky {
+  width: 100%;
+  height: 135px;
+  position: relative;
+}
+
+.sun {
+  float: right;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  right: 75px;
+  background: #FFFC00;
+  box-shadow: 0px 2px 205px 75px rgba(255, 232, 0, 0.50);
+  /*0px 0px 10px 100px rgba(255,252,0,0.50),*/
+}
+
+.cloud {
+  width: 50%;
+  height: 85px;
+  position: absolute;
+  float: right;
+  z-index: 4;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.cloud_base {
+  /* Rectangle 4: */
+  width: inherit;
+  height: 57px;
+  background: #eaeaea;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+}
+
+.haze {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(bottom, rgba(160, 160, 160, 0), rgba(160, 160, 160, 0.8), rgba(160, 160, 160, 0.76), rgba(160, 160, 160, 0.4), rgba(160, 160, 160, 0.9));
+  background: linear-gradient(bottom, rgba(160, 160, 160, 0), rgba(160, 160, 160, 0.8), rgba(160, 160, 160, 0.76), rgba(160, 160, 160, 0.4), rgba(160, 160, 160, 0.9));
+  z-index: 7;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.rain_drop {
+  width: 2px;
+  height: 2px;
+  margin: auto;
+  float: left;
+  padding: auto;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid #979797;
+  animation-name: rain;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  transform: translateY(0px);
+}
+
+
+/*
+  Night time colours:
+  Sky: background: rgb(33, 47, 69);
+
+  mountains: background: -webkit-linear-gradient(bottom, rgb(8,54,72),  rgb(8,54,72),rgb(8,54,72), rgb(20,73,90));
+
+  trees: background-color: white;
+
+*/
+
+.mountain {
+  position: absolute;
+  background: #5A6668;
+  background: -webkit-linear-gradient(bottom, rgb(8, 54, 72), rgb(8, 54, 72), rgb(8, 54, 72), rgb(20, 73, 90));
+  background: -moz-linear-gradient(bottom, rgb(8, 54, 72), rgb(8, 54, 72), rgb(8, 54, 72), rgb(20, 73, 90));
+  background: linear-gradient(bottom, rgb(8, 54, 72), rgb(8, 54, 72), rgb(8, 54, 72), rgb(20, 73, 90));
+  border: none;
+  width: 495px;
+  height: 495px;
+  float: left;
+  transform: rotate(45deg);
+  bottom: -300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.mountain--left {
+  left: 0;
+  z-index: 1;
+}
+
+.mountain--center {
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 720px;
+  width: 720px;
+  bottom: -400px;
+  z-index: 2;
+  border: none;
+}
+
+.mountain--right {
+  right: 0;
+  z-index: 1;
+}
+
+.mountain_cap {
+  position: relative;
+  left: -6px;
+  top: -5px;
+}
+
+.mountain_ice {
+  background-color: white;
+  width: 25px;
+  height: 110px;
+  position: absolute;
+  border-radius: 15px;
+  transform: scale(1.4);
+  background-color: rgb(207, 209, 209);
+}
+
+.mountain_ice--left {}
+
+.mountain_ice--center {
+  left: 30px;
+  top: -15px;
+  transform: rotate(-45deg) scale(1.4);
+  background: -webkit-linear-gradient(left, rgb(207, 209, 209), white);
+  background: -moz-linear-gradient(left, rgb(207, 209, 209), white);
+  background: linear-gradient(left, rgb(207, 209, 209), white);
+}
+
+.mountain_ice--right {
+  transform: rotate(90deg) scale(1.4);
+  top: -45px;
+  left: 45px;
+  background-color: white;
+  z-index: -1;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 4;
+}
+
+.tree {
+  height: 100%;
+  width: 50px;
+  float: left;
+  position: absolute;
+  left: 0;
+}
+
+.trunk {
+  background-color: rgb(119, 102, 60);
+  width: 3px;
+  height: 100%;
+  position: inherit;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.canopy {
+  background-color: white;
+  height: 60%;
+  width: 30px;
+  margin-left: -12.5px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(left, rgb(8, 126, 80), rgb(42, 174, 84));
+  background: -moz-linear-gradient(left, rgb(8, 126, 80), rgb(42, 174, 84));
+  background: linear-gradient(left, rgb(207, 209, 209), white);
+}
+
+
+/*@media screen and (max-height:640px) and (max-width:768px) {
+  .mountain--center{
+    width: 300px;
+    height:300px;
+    bottom: -170px;
+  }
+  .mountain--right, .mountain--left{
+    width: 150px;
+    height: 150px;
+    bottom: -80px;
+  }
+  .mountain_cap{
+    transform: scale(0.5);
+    top:-5px;
+    left: -80px;
+  }
+  .mountain--left .mountain_cap, .mountain--right .mountain_cap{
+    top:0px;
+    left:-40px;
+  }
+  .cloud{
+    width: 95px;
+    height: 55px;
+    position: relative;
+    float: right;
+    z-index: 4;
+  }
+  .cloud_oval{
+    width: 55px;
+  }
+  .cloud_base{
+    height: 35px;
+  }
+}
+/*@media (orientation: portrait){
+  .frame{
+    height: 800px;
+  }
+}*/

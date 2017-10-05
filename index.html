@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet Sipho</title>
+  <link rel="stylesheet" type="text/css" href="mountains.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
+  <link rel="stylesheet" type="text/css" href="laptop.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script>
+</head>
+
+<body>
+  <header class="navigation_wrapper">
+    <header class="navigation_header">
+      <h2 class="main-logo"></h2>
+      <a class="navigation_trigger">
+        ☰
+      </a>
+      <nav class="navigation_top">
+        <ul class="navigation">
+          <li class="active"><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i></a></li>
+          <li><a href="#aboutME" onclick="openPage(event, 'about')">About</a></li>
+          <li><a href="#stuff" onclick="openPage(event, 'portfolio')">Projects</a></li>
+          <li><a href="#stuff" onclick="openPage(event, 'contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </header>
+  <nav class="navigation_side">
+    <ul class="navigation">
+      <li class="active"><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i>Home</a></li>
+      <li><a href="#aboutME" onclick="openPage(event, 'about')"><i class="fa fa-info"></i>About</a></li>
+      <li><a href="#stuff" onclick="openPage(event, 'portfolio')"><i class="fa fa-th"></i>Projects</a></li>
+      <li><a href="#stuff" onclick="openPage(event, 'contact')"><i class="fa fa-phone"></i>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="blurrer">
+    <!--div class="frame">
+      <div class="weather_frame">
+        <div id="displayContent">
+          <div id="temp">
+          </div>
+          <div id="weatherMain">
+          </div>
+          <div id="weatherDesc">
+          </div>
+        </div>
+      </div>
+      <div class="haze">
+      </div>
+      <div class="sky">
+        <div class="sun">
+        </div>
+      </div>
+      <div class="mountain mountain--left">
+        <div class="mountain_cap">
+          <div class="mountain_ice">
+          </div>
+          <div class="mountain_ice mountain_ice--center">
+          </div>
+          <div class="mountain_ice mountain_ice--right">
+          </div>
+       </div>
+      </div>
+      <div class="mountain mountain--center">
+        <div class="mountain_cap">
+         <div class="mountain_ice">
+         </div>
+         <div class="mountain_ice mountain_ice--center">
+         </div>
+         <div class="mountain_ice mountain_ice--right">
+         </div>
+       </div>
+      </div>
+      <div class="mountain mountain--right">
+        <div class="mountain_cap">
+          <div class="mountain_ice">
+          </div>
+          <div class="mountain_ice mountain_ice--center">
+          </div>
+          <div class="mountain_ice mountain_ice--right">
+          </div>
+       </div>
+      </div>
+      <div class="ground">
+        <div class="tree">
+          <div class="trunk">
+            <div class="canopy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+    <div class="everything_wrapper">
+      <div class="laptop_wrapper">
+        <div class="laptop">
+          <div class="display">
+            <div class="camera">
+            </div>
+            <div class="screen">
+              <div class="time">
+                14:56
+              </div>
+              <div class="date">
+                Sunday, 24 August
+              </div>
+            </div>
+            <h2 class="logo">HEWLETT - PACKARD</h2>
+          </div>
+          <!--div class="hinge left">
+          </div>
+          <div class="hinge right">
+          </div-->
+        </div>
+        <div class="stand">
+        </div>
+        <div class="lumia">
+          <div class="top">
+            <div class="speaker">
+            </div>
+            <div class="camera">
+            </div>
+          </div>
+          <div class="display">
+            <div class="time">
+              14:56
+            </div>
+            <div class="date">
+              Sunday, 24 August
+            </div>
+          </div>
+          <div class="navigation-buttons">
+            <i class="fa fa-arrow-left"></i>
+            <i class="fa fa-windows"></i>
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+        <div class="dgcam">
+          <div class="knob"></div>
+          <div class="shutter"></div>
+          <div class="mini-lens">
+            <div class="lens-bg">
+              <div class="lens"></div>
+            </div>
+          </div>
+          <div class="biga-lens">
+            <div class="lens-bg">
+              <div class="lens"></div>
+              <div class="flash"></div>
+            </div>
+          </div>
+          <div class="dgcam-middle">
+            <div class="main-lens">
+              <div class="aperture"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desk">
+        <div class="container-keyboard">
+          <div class="keyboard">
+            <div class="keyboard-row thin">
+              <div class="key lowercase">Esc</div>
+              <div class="key function lo-bright">f1</div>
+              <div class="key function hi-bright">f2</div>
+              <div class="key function expose">f3</div>
+              <div class="key function tilez">f4</div>
+              <div class="key function">f5</div>
+              <div class="key function">f6</div>
+              <div class="key function rewind">f7</div>
+              <div class="key function play-pause">f8</div>
+              <div class="key function ffwd">f9</div>
+              <div class="key function mute">f10</div>
+              <div class="key function lo-vol">f11</div>
+              <div class="key function hi-vol">f12</div>
+              <div class="key eject"></div>
+            </div>
+            <div class="keyboard-row">
+              <div class="key"><span>~<br/>`</span></div>
+              <div class="key"><span>!<br/>1</span></div>
+              <div class="key"><span>@<br/>2</span></div>
+              <div class="key"><span>#<br/>3</span></div>
+              <div class="key"><span>$<br/>4</span></div>
+              <div class="key"><span>%<br/>5</span></div>
+              <div class="key"><span>^<br/>6</span></div>
+              <div class="key"><span>&amp;<br/>7</span></div>
+              <div class="key"><span>*<br/>8</span></div>
+              <div class="key"><span>(<br/>9</span></div>
+              <div class="key"><span>)<br/>0</span></div>
+              <div class="key"><span>_<br/>-</span></div>
+              <div class="key"><span>+<br/>=</span></div>
+              <div class="key extra-size lowercase lower-right">backspace</div>
+            </div>
+            <div class="keyboard-row">
+              <div class="key extra-size lowercase lower-left">tab</div>
+              <div class="key">Q</div>
+              <div class="key">W</div>
+              <div class="key">E</div>
+              <div class="key">R</div>
+              <div class="key">T</div>
+              <div class="key">Y</div>
+              <div class="key">U</div>
+              <div class="key">I</div>
+              <div class="key">O</div>
+              <div class="key">P</div>
+              <div class="key"><span>{<br/>[</span></div>
+              <div class="key"><span>}<br/>]</span></div>
+              <div class="key"><span>|<br/>\</span></div>
+            </div>
+            <div class="keyboard-row">
+              <div class="key lowercase lower-left extra-size-two">caps lock<span class="absolute-left caps-dot">&bull;</span></div>
+              <div class="key">A</div>
+              <div class="key">S</div>
+              <div class="key">D</div>
+              <div class="key">F</div>
+              <div class="key">G</div>
+              <div class="key">H</div>
+              <div class="key">J</div>
+              <div class="key">K</div>
+              <div class="key">L</div>
+              <div class="key"><span>:<br/>;</span></div>
+              <div class="key"><span>"<br/>'</span></div>
+              <div class="key extra-size-two lowercase lower-right">return<span class="absolute-right">enter</span></div>
+            </div>
+            <div class="keyboard-row">
+              <div class="key double-size lowercase lower-left">shift</div>
+              <div class="key">Z</div>
+              <div class="key">X</div>
+              <div class="key">C</div>
+              <div class="key">V</div>
+              <div class="key">B</div>
+              <div class="key">N</div>
+              <div class="key">M</div>
+              <div class="key"><span>&lt;<br/>,</span></div>
+              <div class="key"><span>&gt;<br/>.</span></div>
+              <div class="key"><span>?<br/>/</span></div>
+              <div class="key double-size lowercase lower-right">shift</div>
+            </div>
+            <div class="keyboard-row bottom-row">
+              <div class="key lower-left lowercase">fn</div>
+              <div class="key lower-left lowercase">control</div>
+              <div class="key lower-left lowercase">option<span class="absolute-left">alt</span></div>
+              <div class="key lower-center lowercase extra-size-two">command<span class="absolute-right icon">&#8984;</span></div>
+              <div class="key space-bar"></div>
+              <div class="key lower-center lowercase extra-size-two">command<span class="absolute-left icon">&#8984;</span></div>
+              <div class="key lower-right lowercase">option<span class="absolute-right">alt</span></div>
+              <div class="arrows">
+                <div class="key">&#9668;</div>
+                <div class="up-down">
+                  <div class="key">&#9650;</div>
+                  <div class="key">&#9660;</div>
+                </div>
+                <div class="key">&#9658;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="corner_codepen">
+        <a href="https://codepen.io/siphosenkosindhlovu/full/wemYEm"><button class="btn btn-default"><i class="fa fa-codepen fa-lg"></i><span class='not_mobile'> View On CodePen<span></button></a>
+      </div>
+      <div class="corner_codepen corner_exit">
+        <a href="javascript:void(0);"><button class="btn btn-default"><i class="fa fa-arrow-circle-left fa-lg"></i><span class='not_mobile'> Back<span></button></a>
+      </div>
+    </div>
+  </div>
+  <header id="landing" class="tab container-fluid landing center-block">
+    <div class="container">
+      <div class="row">
+        <h1>Meet Sipho. He builds the web.</h1>
+        <br>
+        <h2>He's a web <span style="text-decoration: line-through">designer</span> developer</h2>
+        <h3>The Front End Web</h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-6" style="text-align: right">
+          <div class="landing_buttons">
+            <a href="#aboutME" onclick="openPage(event, 'about')">About <i class="fa fa-arrow-circle-right fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-xs-6" style="text-align: left">
+          <div class="landing_buttons">
+            <a href="#aboutME" onclick="openPage(event, 'portfolio')">Work <i class="fa fa-arrow-circle-right fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="landing_social">
+          <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
+          <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
+          <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
+          <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="corner_button landing_buttons">
+          <a href="javascript:void(0);"><i class="fa fa-image fa-lg"></i> View Background</a>
+        </div>
+      </div>
+    </div>
+
+    <!--div class="col-sm-8 text-left">
+      <div class="spotlight">
+        <h3>Spotlight</h3>
+        <div class="spotlight_viewarea"></div>
+        <div class="spotlight_caption">
+          <h4>Javascript Calculator</h4>
+          <div class="col-xs-6"><a href="#">View on CodePen</a></div>
+          <div class="col-xs-6"><a href="#">View on GitHub</a></div>
+        </div>
+      </div>
+    </div-->
+  </header>
+  <main class="container-fluid" style="padding:0">
+
+    <a name="aboutME"></a>
+    <section id="about" class="container-fluid about text-center tab">
+      <h2 class="heading">About</h2>
+      <figure class="profile">
+        <img src="profile.jpg">
+      </figure>
+      <div class="row">
+        <nav class="navigation_profile_wrapper">
+          <ul class="navigation_profile">
+            <li><label for="brief">Brief</label></li>
+            <li><label for="education">Education</li>
+            <li><label for="skills">Skills</li>
+          </ul>
+        </nav>
+      </div>
+      <br>
+      <br>
+      <br>
+      <input id="brief" type="radio" name="abouters" checked>
+      <section class="brief">
+        <p class="body"><span class="hi">Hello World!</span> I am <b class="hi">Siphosenkosi Ndhlovu</b>, a Front End Developer based in
+          Zimbabwe
+        </p>
+        <p class="body">I am a high school student doing Advanced Level Sciences at St John's High School Emerald Hill. I started coding
+          in 2014 for Cambridge Ordinary Level I.C.T. I have been working with Front End web technologies ever since.</p>
+        <p class="body">At the moment I am doing Front End Development with freeCodeCamp.com</p>
+      </section>
+      <input id="skills" type="radio" name="abouters">
+      <section class="skill">
+
+        <div class="container">
+          <div class="row text-center larger skills">
+            <div class="col-sm-4">
+              <i class="fa fa-html5 fa-lg"></i>
+              <p>HTML 5</p>
+              <div>
+                <ul>
+                  <li>Geolocation API</li>
+                  <li>Scalable Vector Graphics</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <i class="fa fa-css3 fa-lg"></i>
+              <p>CSS 3</p>
+              <div>
+                <ul>
+                  <li>Bootstrap</li>
+                  <li>Responsive Design</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <span class="js fa-lg">JS</span>
+              <p>JavaScript</p>
+              <div>
+                <ul>
+                  <li>jQuery</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div></section>
+      
+      
+        <section class="education">
+        Loren ipsun
+      </section>
+      <!--input id="education" type="radio" name="abouters">
+      <section class="education"-->
+      </section>
+    </section>
+    <a name="stuff"></a>
+    <section id="portfolio" class="container-fluid portfolio text-center tab">
+      <h2 class="heading text-center">Portfolio</h2>
+      <div class="container flex-grid">
+        <a class="web-card" href="#"><img src="Wikipedia.png"><p class="caption">Viewer for Wikipedia</p></a>
+        <a class="web-card" href="#"><img src="Weather.png"><p class="caption">Local Weather Service</p></a>
+        <a class="web-card" href="#"><img src="Calculator.png"><p class="caption">Javascript Calculator</p></a>
+        <a class="web-card" href="#"><img src="#"><p class="caption">Random Quote Generator</p></a>
+        <a class="web-card" href="#"><img scr="#"><p class="caption">Javascript Calculator</p></a>
+        <a class="web-card" href="#"><img scr="#"><p class="caption">Tic tac toe</p></a>
+      </div>
+    </section>
+    <a name="phone"></a>
+    <section id="contact" class="container-fluid contact text-center tab">
+      <h2 class="heading">Contact Me</h2>
+      <div class="container">
+        <div class="call-grp row">
+          <div class="col-sm-4">
+            <i class="fa fa-phone fa-3x"></i>
+            <p>+263 718 513 777</p>
+          </div>
+          <div class="col-sm-4">
+            <i class="fa fa-envelope fa-3x"></i>
+            <p>sipho.ndhlovu@outlook.com</p>
+          </div>
+          <div class="col-sm-4">
+            <i class="fa fa-map-pin fa-3x"></i>
+            <p>Mazowe, Zimbabwe</p>
+          </div>
+        </div>
+        <div class="call-grp row">
+          <div class="col-xs-4">
+            <a href="http://facebook.com/siphosenkosim.ndhlovu"><i class="fa fa-facebook fa-3x"></i></a>
+          </div>
+          <div class="col-xs-4">
+            <a href="http://instagram.com/sipho_ndhlovu_"><i class="fa fa-instagram fa-3x"></i></a>
+          </div>
+          <div class="col-xs-4">
+            <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-3x"></i></a>
+          </div>
+          <div>
+            <div class "call-grp row">
+              <div class="col-xs-4">
+                <a href="#"><i class="fa fa-linkedin fa-3x"></i></a>
+              </div>
+              <div class="col-xs-4">
+                <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-3x"></i></a>
+              </div>
+              <div class="col-xs-4">
+                <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-3x"></i></a>
+              </div>
+            </div>
+            <!--div class="col-sm-8">
+            <form role="form" class="form-horizontal" name="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name here">
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your email here">
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea type="text" class="form-control" id="name" placeholder="Say something. Anything :)" rows="8"></textarea>
+      </div>
+      <div class="form-group text-right">
+        <button type="submit" class="btn btn-danger" style="box-shadow: 2px 2px 5px #5D1C1A">Send</button>
+      </div>
+      </form>
+      </div-->
+
+      </div>
+    </section>
+  </main>
+  <footer class="container-fluid footer center-block text-center">
+    <p>&copy; 2017 Siphosenkosi Ndhlovu</p>
+
+  </footer>
+
+  <script src="jquery-3.1.1.js"></script>
+  <!--script src="mountains.js"></script-->
+  <script src="script.js"></script>
+  <script>
+    function openPage(evt, pageName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tab" and hide them
+      tabcontent = document.getElementsByClassName("tab");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements ith class="tablinks" and remove the class "active"
+      tablinks = document.querySelectorAll(".navigation li");
+      for (i = 0; i < tablinks.length; i++) {
+        evt.preventDefault();
+
+      }
+
+      // Show the current tab, and add an "active" class to the link that opened the tab
+      document.getElementById(pageName).style.display = "block";
+      if (pageName == "about") $("#brief").css("display", "block");
+      //evt.currentTarget.className += " active";
+    }
+
+    var navProf = document.querySelectorAll(".navigation_profile li");
+    navProf[0].classList.add("active");
+    navProf.forEach(function (val) {
+      val.addEventListener("click", function (event) {
+        navProf.forEach(function (iter) {
+          if (iter.classList.contains("active")) iter.classList.remove("active");
+        });
+        val.classList.add("active");
+      })
+    }, false);
+  </script>
+</body>
+
+</html>

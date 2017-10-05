@@ -1,0 +1,612 @@
+.everything_wrapper {
+  width: auto;
+  position: relative;
+}
+
+.everything_wrapper * {
+  box-sizing: border-box;
+}
+
+.laptop_wrapper {
+  position: relative;
+  width: 755px;
+  margin: 0 auto;
+}
+
+.laptop {
+  width: 755px;
+  height: 600px;
+  background: #D8D8D8;
+  border-radius: 25px 25px 5px 5px;
+  box-shadow: 0px 15px 170px rgba(0, 0, 0, 0.5);
+  padding-top: 1px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -170px;
+  margin-bottom: -100px;
+  transform: perspective(1000px) rotateX(-70deg);
+  z-index: 2;
+}
+
+.stand {
+  margin: 0 auto;
+  margin-top: -350px;
+  width: 200px;
+  height: 200px;
+  transform: perspective(1000px) rotateX(45deg) translateZ(-400px) translateY(-300px);
+  border-radius: 30px;
+  background: #F2F2F2;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: -500;
+}
+
+.laptop .camera {
+  top: 8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: #403E3E;
+  border-radius: 50%;
+}
+
+.laptop .display {
+  width: 750px;
+  height: 520px;
+  border-radius: 25px 25px 7px 7px;
+  margin: 1px auto;
+  padding: 24px;
+  background: -webkit-linear-gradient(top left, rgb(83, 79, 79), #2b2b2b, #2b2b2b, #2b2b2b);
+  background: -moz-linear-gradient(top left, rgb(83, 79, 79), #2b2b2b, #2b2b2b, #2b2b2b);
+  background: -o-linear-gradient(top left, rgb(83, 79, 79), #2b2b2b, #2b2b2b, #2b2b2b);
+  background: -o-linear-gradient(top left, rgb(83, 79, 79), #2b2b2b, #2b2b2b, #2b2b2b);
+  border: 1px solid #979797;
+}
+
+.laptop .display .screen {
+  width: 700px;
+  height: 445px;
+  background-color: #D8D8D8;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('Google-Now-Wallpaper-1.png');
+  background-size: cover;
+  border: 1px solid #979797;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+
+.laptop .display .screen .time {
+  font-size: 60px;
+}
+
+.laptop .display .screen .date {
+  padding-left: 8px;
+  font-size: 30px;
+  font-weight: 100px;
+}
+
+.laptop .logo {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #7A7272;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+}
+
+.hinge {
+  width: 100px;
+  height: 17px;
+  background: #A37500;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.50);
+  position: absolute;
+  bottom: 0;
+}
+
+.left {
+  left: 75px;
+}
+
+.right {
+  right: 75px;
+}
+
+.desk {
+  width: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.lumia {
+  box-sizing: border-box;
+  width: 183px;
+  height: 360px;
+  border: 3px solid #D1CECE;
+  border-radius: 6px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  transform: rotate(-0deg);
+  background: -webkit-linear-gradient(top left, rgb(83, 79, 79), #1f1f1f, #1f1f1f, #1f1f1f);
+  background: -moz-linear-gradient(top left, rgb(83, 79, 79), #1f1f1f, #1f1f1f, #1f1f1f);
+  background: -o-linear-gradient(top left, rgb(83, 79, 79), #1f1f1f, #1f1f1f, #1f1f1f);
+  background: linear-gradient(top left, rgb(83, 79, 79), #1f1f1f, #1f1f1f, #1f1f1f);
+  background-color: #1F1F1F;
+  position: absolute;
+  left: 40px;
+  top: 310px;
+  float: left;
+  transform: scale(0.5) rotate(47deg);
+}
+
+.lumia .speaker {
+  width: 50px;
+  height: 4px;
+  background-color: #565656;
+  margin: 8px auto 7px auto;
+  border-radius: 2px;
+}
+
+.lumia .camera {
+  width: 8px;
+  height: 8px;
+  background: #2D2D2D;
+  border-radius: 50%;
+  position: absolute;
+  right: 43px;
+  top: 4px;
+}
+
+.lumia .display {
+  background: url('Google-Now-Wallpaper-1.png');
+  background-size: cover;
+  width: 163px;
+  height: 300px;
+  margin: 0px auto;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 5px;
+  padding-top: 240px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 5px #171825;
+}
+
+.lumia .time {
+  font-size: 36px;
+}
+
+.lumia .date {
+  padding-left: 6px;
+  font-size: 10px;
+}
+
+.lumia .navigation-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  color: white;
+  font-size: 9px;
+  width: 130px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.lumia .fa-search {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  padding: 0;
+}
+
+.lumia .fa-windows {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.dgcam {
+  height: 155px;
+  width: 255px;
+  background-image: -webkit-radial-gradient(52% 157%, #FFFFFF 58%, #FBFBFB 84%);
+  background-image: radial-gradient(52% 157%, #FFFFFF 58%, #FBFBFB 84%);
+  border: 1px solid #979797;
+  box-shadow: 4px 5px 10px 0 rgba(0, 0, 0, 0.50), inset 0 0 12px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 4px;
+  position: absolute;
+  right: 40px;
+  top: 350px;
+  float: left;
+  z-index: auto;
+  transform: scale(0.5) rotate(32deg)
+}
+
+.knob {
+  /* Rectangle 21: */
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  width: 45px;
+  height: 10px;
+  background-image: linear-gradient(-90deg, #EEEEEE 0%, #FFF7F7 50%, #B5B5B5 100%);
+  border: 1px solid #DEDEDE;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.shutter {
+  /* Rectangle 20: */
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+  right: 15px;
+  width: 45px;
+  height: 10px;
+  background-image: linear-gradient(-90deg, #EEEEEE 0%, #FFFFFF 50%, #D8D8D8 100%);
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 3px;
+}
+
+.mini-lens {
+  /* Rectangle 16: */
+  box-sizing: border-box;
+  margin: 10px auto auto 45px;
+  float: left;
+  width: 53px;
+  height: 21px;
+  padding: 1px;
+  background-image: linear-gradient(135deg, #CBCBCB 0%, #D8D7D7 31%, #D8D7D7 31%, #E8E7E7 71%, #FAFAFA 93%, #FEFEFE 98%, #FFFFFF 100%);
+  border: 1px solid #979797;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.50);
+  border-radius: 2px;
+}
+
+.lens-bg {
+  /* Rectangle 22: */
+  width: 49px;
+  height: 17px;
+  margin: 0 auto;
+  background: #5C5C5C;
+  border-radius: 2px;
+  padding: 1px auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lens-bg>.lens {
+  /* Rectangle 17: */
+  width: 30px;
+  height: 15px;
+  background: #8C8C8C;
+  border: 1px solid #777777;
+  border-radius: 2px;
+}
+
+.biga-lens {
+  float: left;
+  width: 115px;
+  margin-left: 30px;
+  margin-top: 6px;
+  height: 30px;
+  padding: 1px;
+  background-image: linear-gradient(90deg, #CBCBCB 0%, #D8D7D7 31%, #D8D7D7 31%, #E8E7E7 71%, #FAFAFA 93%, #FEFEFE 98%, #FFFFFF 100%);
+  border: 1px solid #979797;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.50);
+  border-radius: 2px;
+}
+
+.biga-lens>.lens-bg {
+  width: 111px;
+  height: 26px;
+  display: block;
+}
+
+.biga-lens>.lens-bg>.lens {
+  height: 100%;
+  width: 45px;
+  margin-left: 10px;
+  float: left;
+}
+
+.flash {
+  /* Rectangle 19: */
+  width: 40px;
+  height: 20px;
+  background-image: radial-gradient(50% 116%, #FFFFFF 50%, #FFFFFF 62%, #5C5C5C 93%, #434343 100%);
+  border: 1px solid #979797;
+  border-radius: 6px;
+  margin: 3px 8px 3px 8px;
+  float: left;
+}
+
+.dgcam-middle {
+  /* Rectangle 14: */
+  width: 265px;
+  height: 100px;
+  background: #585858;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: -5px;
+}
+
+.main-lens {
+  margin: auto;
+  margin-top: -8px;
+  width: 115px;
+  height: 115px;
+  /* Oval 2: */
+  background-image: linear-gradient(156deg, #757575 2%, #272727 100%);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aperture {
+  /* Oval 5: */
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  /* Oval 5: */
+  background: #3C3C3C;
+  border: 1px solid #3E3E3E;
+}
+
+.container-keyboard {
+  width: 816px;
+  padding: 30px 8px 8px;
+  margin: 0px auto;
+  transform: scale(0.5);
+  box-shadow: inset 1px 1px 0px #f1f1f1, 5px 5px 12px rgba(0, 0, 0, 0.5);
+  background-color: #e3e3e3;
+  border-radius: 1px 1px 7px 7px;
+  font-family: sans-serif;
+}
+
+.keyboard-row {
+  display: flex;
+}
+
+.key {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 3px 2px;
+  height: 30px;
+  margin: 4px;
+  letter-spacing: 0.5px;
+  color: #3a3a3a;
+  background-color: #f7f7f7;
+  flex: 1;
+  box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.key span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.key::before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: '';
+}
+
+.keyboard-row.thin .key {
+  height: 20px;
+}
+
+.keyboard-row.bottom-row .key {
+  height: 24px;
+}
+
+.key {
+  height: 48px;
+}
+
+.keyboard-row.thin .key {
+  height: 28px;
+}
+
+.keyboard-row.bottom-row .key {
+  height: 55px;
+}
+
+.key.extra-size {
+  flex: 1.25;
+}
+
+.key.extra-size-two {
+  flex: 1.625;
+}
+
+.key.double-size {
+  flex: 2.125;
+}
+
+.key.lowercase {
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+.key.function {
+  vertical-align: bottom;
+  text-align: right;
+  font-size: 8px;
+}
+
+.key.lower-right {
+  vertical-align: bottom;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.key.lower-left {
+  vertical-align: bottom;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.key.lower-center {
+  vertical-align: bottom;
+}
+
+.key.space-bar {
+  flex: 7.2;
+}
+
+.key .absolute-left,
+.key .absolute-right {
+  position: absolute;
+  top: 5px;
+  font-size: 9px;
+}
+
+.key .absolute-left.icon,
+.key .absolute-right.icon {
+  font-size: 12px;
+}
+
+.key .absolute-right {
+  right: 5px;
+}
+
+.key .absolute-left {
+  left: 5px;
+}
+
+.key .absolute-left.caps-dot {
+  top: 3px;
+  left: 4px;
+}
+
+.bottom-row .arrows {
+  display: flex;
+  flex: 4;
+  justify-content: justify;
+  align-items: flex-end;
+  padding-bottom: 4px;
+}
+
+.bottom-row .arrows .up-down {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.bottom-row .arrows .up-down .key {
+  margin: 0;
+}
+
+.bottom-row .arrows .up-down .key:first-child {
+  box-shadow: inset 0 -5px 4px -4px #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+
+.bottom-row .arrows .up-down .key+.key {
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+.bottom-row .arrows .key {
+  flex: 1;
+  font-size: 7px;
+  margin: 0 4px;
+  height: 27px;
+  font-family: "Georgia", sans-serif;
+  color: #555;
+}
+
+
+/* function row icons */
+
+.fn-row-icon {
+  background-size: auto 60%;
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+}
+
+.eject,
+.lo-bright,
+.hi-bright,
+.expose,
+.tilez,
+.rewind,
+.ffwd,
+.play-pause,
+.mute,
+.lo-vol,
+.hi-vol,
+.eject {
+  background-size: auto 60%;
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+}
+
+.eject {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-01_1.svg);
+}
+
+.lo-bright {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-10_1.svg);
+}
+
+.hi-bright {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-09_1.svg);
+}
+
+.expose {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-08_1.svg);
+}
+
+.tilez {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-07_1.svg);
+}
+
+.rewind {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-06_1.svg);
+}
+
+.ffwd {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-04_1.svg);
+}
+
+.play-pause {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-05_1.svg);
+}
+
+.mute {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-11.svg);
+}
+
+.lo-vol {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-03_1.svg);
+}
+
+.hi-vol {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-02_1.svg);
+}
+
+.eject {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-01_1.svg);
+}
