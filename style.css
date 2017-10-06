@@ -43,7 +43,6 @@ body {
   min-height: 100vh;
   -webkit-animation: fadeEffect 0.3s;
   animation: fadeEffect 0.3s;
-  display: none;
 }
 
 .toggleblur {
@@ -62,6 +61,7 @@ body {
   /*background-color: #30534F;*/
   transition: all 0.4s;
   background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);
   -webkit-backdrop-filter: blur(55px);
   backdrop-filter: blur(55px);
   z-index: 10000000000000
@@ -107,17 +107,11 @@ body {
   transition: all 0.3s;
 }
 
-.main-logo img {
-}
-
 .navigation_trigger:hover {
   color: black;
   cursor: pointer;
 }
 
-.not_mobile {
-  display: none;
-}
 
 .navigation_side {
   overflow: hidden;
@@ -134,7 +128,7 @@ body {
   -webkit-backdrop-filter: blur(75px);
 }
 
-.navigation_top {
+.navigation_top, .social_buttons, .not_mobile, .tab {
   display: none;
 }
 
@@ -324,7 +318,7 @@ footer {
 }
 
 .about {
-  padding-top: 65px;
+  padding-top: 50px;
   margin: 0;
   position: relative;
   background: white;
@@ -377,6 +371,7 @@ footer {
 .profile + .row{
   background: white;
 }
+
 .navigation_profile_wrapper{
   margin-top: 15px;
   background: white
@@ -386,12 +381,26 @@ footer {
   -webkit-padding-start: 0px;
   padding-block-start: 0px;
 }
+
 .navigation_profile li{
-  display: inline;
-  padding:15px;
+  display: inline-block;
+  margin: -2px;
+  padding: 0;
+}
+
+.navigation_profile label{
+  padding: 15px;
   font-size: 1.1em;
   color: #30534F;
+  height: inherit;
+  border-bottom: 2px solid #C5C5C5;
+  transition: all 0.3s
 }
+
+.navigation_profile label:hover{
+  cursor: pointer;
+}
+
 .hi {
   color: #30534F;
   font-size: 24px;
@@ -545,11 +554,9 @@ footer {
     display: inline;
   }
   .navigation li:first-child.active {
-    border-left: 2px solid transparent !important;
     border-bottom: 4px solid white !important;
   }
   .active {
-    border-left: 2px solid transparent !important;
     border-bottom: 4px solid #30534F !important;
   }
   .navigation_top {
@@ -581,12 +588,27 @@ footer {
   .open {
     transform: translateX(-110px);
   }
+  
+  .social_buttons{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.2em;
+  }
+  .social_buttons a{
+    padding: 5px;
+    color: #30534F;
+  }
   .landing {
     padding: 2em;
     align-items: center;
   }
   .landing h1 {
     font-size: 3em;
+  }
+  .about {
+    padding-top: 40px;
   }
   .skills>div {
     margin: 10px 0;

@@ -11,9 +11,9 @@
   <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
   <link rel="stylesheet" type="text/css" href="laptop.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script>
+  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script-->
 </head>
 
 <body>
@@ -31,6 +31,11 @@
           <li><a href="#stuff" onclick="openPage(event, 'contact')">Contact</a></li>
         </ul>
       </nav>
+      <nav class="social_buttons">
+          <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
+          <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
+          <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
+          <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>      </nav>
     </header>
   </header>
   <nav class="navigation_side">
@@ -402,8 +407,7 @@
         <a class="web-card" href="#"><img src="Weather.png"><p class="caption">Local Weather Service</p></a>
         <a class="web-card" href="#"><img src="Calculator.png"><p class="caption">Javascript Calculator</p></a>
         <a class="web-card" href="#"><img src="#"><p class="caption">Random Quote Generator</p></a>
-        <a class="web-card" href="#"><img scr="#"><p class="caption">Javascript Calculator</p></a>
-        <a class="web-card" href="#"><img scr="#"><p class="caption">Tic tac toe</p></a>
+        <a class="web-card" href="#"><img src="#"><p class="caption">Tic tac toe</p></a>
       </div>
     </section>
     <a name="phone"></a>
@@ -501,7 +505,7 @@
       //evt.currentTarget.className += " active";
     }
 
-    var navProf = document.querySelectorAll(".navigation_profile li");
+    var navProf = document.querySelectorAll(".navigation_profile li label");
     navProf[0].classList.add("active");
     navProf.forEach(function (val) {
       val.addEventListener("click", function (event) {
