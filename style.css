@@ -112,7 +112,6 @@ body {
   cursor: pointer;
 }
 
-
 .navigation_side {
   overflow: hidden;
   height: 100vh;
@@ -128,7 +127,10 @@ body {
   -webkit-backdrop-filter: blur(75px);
 }
 
-.navigation_top, .social_buttons, .not_mobile, .tab {
+.navigation_top,
+.social_buttons,
+.not_mobile,
+.tab {
   display: none;
 }
 
@@ -197,14 +199,10 @@ footer {
   position: relative;
 }
 
-.landing h1 {
-  font-size: 2em;
-}
-
 .landing h1,
 .landing h2,
 .landing h3 {
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .landing_social {
@@ -368,27 +366,29 @@ footer {
   border: 3px solid white;
   box-shadow: 0px 0px 30px rgba(48, 83, 79, 0.3), inset 0px 1px 3px 3px rgba(0, 0, 0, 0.50);
 }
-.profile + .row{
+
+.profile+.row {
   background: white;
 }
 
-.navigation_profile_wrapper{
+.navigation_profile_wrapper {
   margin-top: 15px;
   background: white
 }
-.navigation_profile{
+
+.navigation_profile {
   list-style: none;
   -webkit-padding-start: 0px;
   padding-block-start: 0px;
 }
 
-.navigation_profile li{
+.navigation_profile li {
   display: inline-block;
   margin: -2px;
   padding: 0;
 }
 
-.navigation_profile label{
+.navigation_profile label {
   padding: 15px;
   font-size: 1.1em;
   color: #30534F;
@@ -397,7 +397,7 @@ footer {
   transition: all 0.3s
 }
 
-.navigation_profile label:hover{
+.navigation_profile label:hover {
   cursor: pointer;
 }
 
@@ -412,16 +412,19 @@ footer {
   padding: 0 50px;
 }
 
-.about input[type="radio"]{
+.about input[type="radio"] {
   display: none !important;
 }
-.about input[type="radio"]+ section{
+
+.about input[type="radio"]+section {
   display: none;
 }
-.about input[type="radio"]:checked + section{
+
+.about input[type="radio"]:checked+section {
   display: block;
   animation: fadeEffect 0.2s ease-in;
 }
+
 .larger {
   margin: 30px;
 }
@@ -432,7 +435,6 @@ footer {
   font-size: 72px;
   margin-bottom: 10px;
 }
-
 
 .flex-grid {
   display: flex;
@@ -446,11 +448,11 @@ footer {
   display: block;
   width: 300px;
   height: 300px;
-  border: 1px solid #74C0B7;
-  box-shadow: 6px 6px 25px 2px rgba(48, 83, 79, 0.4);
+  border: 1px solid #BBBBBB;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.21);
   /*inset 0px 1px 3px 0px rgba(0,0,0,0.50),
               inset 0px 1px 3px 0px rgba(0,0,0,0.50);*/
-  border-radius: 0px;
+  border-radius: 10px;
   margin: 25px auto;
   overflow: hidden;
 }
@@ -469,8 +471,8 @@ footer {
   position: absolute;
   height: 60px;
   width: inherit;
-  color: white;
-  background-color: #74C0B7;
+  color: #30534F;
+  background-color: #FFFFFF;
   bottom: -10px;
 }
 
@@ -588,15 +590,14 @@ footer {
   .open {
     transform: translateX(-110px);
   }
-  
-  .social_buttons{
+  .social_buttons {
     display: block;
     position: absolute;
     right: 15px;
     top: 10px;
     font-size: 1.2em;
   }
-  .social_buttons a{
+  .social_buttons a {
     padding: 5px;
     color: #30534F;
   }
