@@ -39,7 +39,7 @@ $(document).ready(function () {
   function fader() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       $(".navigation_wrapper").css("height", "60px");
-      $(".navigation_trigger").css("top", "5px");
+      $(".navigation_trigger").css("top", "0px");
       $(".navigation_top").css("padding-top", "0px");
       $(".main-logo").css({
         "transform": "scale(0.5)",

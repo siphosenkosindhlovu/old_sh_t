@@ -90,6 +90,7 @@ body {
   background: transparent;
   border: none;
   color: black;
+  transition: all 0.4s;
 }
 
 .main-logo {
