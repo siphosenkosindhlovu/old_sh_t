@@ -508,14 +508,14 @@
 
     var navProf = document.querySelectorAll(".navigation_profile li label");
     navProf[0].classList.add("active");
-    navProf.forEach(function (val) {
-      val.addEventListener("click", function (event) {
-        navProf.forEach(function (iter) {
-          if (iter.classList.contains("active")) iter.classList.remove("active");
-        });
-        val.classList.add("active");
+    for (var i = 0, max = navProf.length; i < max; i++) {
+      navProf[i].addEventListener("click", function (event) {
+        for (var j = 0; j < navProf.length; j++) {
+          if (navProf[j].classList.contains("active")) navProf[j].classList.remove("active");
+        };
+        event.target.classList.add("active");
       })
-    }, false);
+    };
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
       "November", "December"
@@ -528,7 +528,7 @@
     var date = document.querySelectorAll(".date");
 
     function clockUpdater() {
-      time.forEach(function (ele) {
+      for (var k = 0; k < time.length; k++) {
         var mins = function () {
           if (currDate.getMinutes() < 10) {
             return "0" + currDate.getMinutes()
@@ -536,11 +536,11 @@
             return currDate.getMinutes()
           }
         }
-        ele.innerHTML = currDate.getHours() + ":" + mins();
-      });
-      date.forEach(function (ele) {
-        ele.innerHTML = days[currDate.getDay()] + ", " + currDate.getDate() + " " + months[currDate.getMonth()];
-      })
+        time[k].innerHTML = currDate.getHours() + ":" + mins();
+      };
+      for (var l = 0; l < date.length; l++) {
+        date[l].innerHTML = days[currDate.getDay()] + ", " + currDate.getDate() + " " + months[currDate.getMonth()];
+      };
     };
     clockUpdater();
     y = setInterval(clockUpdater, 60000)

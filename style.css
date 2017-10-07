@@ -133,7 +133,9 @@ body {
 .tab {
   display: none;
 }
-
+.navigation_top{
+  visibility: hidden;
+}
 .navigation {
   list-style-type: none;
   position: absolute;
@@ -325,7 +327,7 @@ footer {
 }
 
 .portfolio {
-  padding-top: 65px;
+  padding-top: 95px;
   position: relative;
   background-color: rgba(245, 245, 245, 1);
   -webkit-backdrop-filter: blur(55px);
@@ -333,7 +335,7 @@ footer {
 }
 
 .contact {
-  padding-top: 65px;
+  padding-top: 95px;
   height: auto;
   position: relative;
   background-color: white;
@@ -380,6 +382,7 @@ footer {
   list-style: none;
   -webkit-padding-start: 0px;
   padding-block-start: 0px;
+  padding-left: 0px;
 }
 
 .navigation_profile li {
@@ -565,6 +568,7 @@ footer {
     width: 376px;
     height: 40px;
     display: block;
+    visibility: visible;
     margin: auto;
     padding-top: 35px;
     z-index: 100;

@@ -4,14 +4,13 @@ $(document).ready(function () {
 
   $(".navigation_trigger").on("click", function () {
     $(".navigation_side").toggleClass("open");
-    $("header.landing, main, footer").toggleClass("open");
+    //$("header.landing, main, footer").toggleClass("open");
   });
 
   $(".navigation li").on("click", function (event) {
     $(".navigation li").not(this).removeClass("active");
     $(this).addClass("active");
-
-  })
+  });
 
   $(".corner_button, .corner_exit").on("click", function () {
     if (inittrue) {
@@ -24,16 +23,13 @@ $(document).ready(function () {
       $(".corner_codepen").fadeToggle();
       //  $(".blurrer").addClass("toggleblur");
       inittrue = true;
-    }
+    };
   });
 
 
   $(window).on("scroll", function (event) {
-    fader()
-  })
-
-
-
+    fader();
+  });
 
 
   function fader() {
