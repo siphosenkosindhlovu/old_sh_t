@@ -461,7 +461,7 @@ footer {
 }
 
 .web-card img {
-  width: inherit;
+  width: 100%;
   height: inherit;
 }
 
@@ -473,7 +473,7 @@ footer {
   text-align: center;
   position: absolute;
   height: 60px;
-  width: inherit;
+  width: 100%;
   color: #30534F;
   background-color: #FFFFFF;
   bottom: -10px;
