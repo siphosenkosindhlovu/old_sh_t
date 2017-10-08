@@ -43,7 +43,6 @@ body {
   min-height: 100vh;
   -webkit-animation: fadeEffect 0.3s;
   animation: fadeEffect 0.3s;
-  display: none;
 }
 
 .toggleblur {
@@ -62,6 +61,7 @@ body {
   /*background-color: #30534F;*/
   transition: all 0.4s;
   background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);
   -webkit-backdrop-filter: blur(55px);
   backdrop-filter: blur(55px);
   z-index: 10000000000000
@@ -90,6 +90,7 @@ body {
   background: transparent;
   border: none;
   color: black;
+  transition: all 0.4s;
 }
 
 .main-logo {
@@ -106,16 +107,9 @@ body {
   transition: all 0.3s;
 }
 
-.main-logo img {
-}
-
 .navigation_trigger:hover {
   color: black;
   cursor: pointer;
-}
-
-.not_mobile {
-  display: none;
 }
 
 .navigation_side {
@@ -133,10 +127,15 @@ body {
   -webkit-backdrop-filter: blur(75px);
 }
 
-.navigation_top {
+.navigation_top,
+.social_buttons,
+.not_mobile,
+.tab {
   display: none;
 }
-
+.navigation_top{
+  visibility: hidden;
+}
 .navigation {
   list-style-type: none;
   position: absolute;
@@ -202,14 +201,10 @@ footer {
   position: relative;
 }
 
-.landing h1 {
-  font-size: 2em;
-}
-
 .landing h1,
 .landing h2,
 .landing h3 {
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .landing_social {
@@ -323,7 +318,7 @@ footer {
 }
 
 .about {
-  padding-top: 65px;
+  padding-top: 50px;
   margin: 0;
   position: relative;
   background: white;
@@ -332,7 +327,7 @@ footer {
 }
 
 .portfolio {
-  padding-top: 65px;
+  padding-top: 95px;
   position: relative;
   background-color: rgba(245, 245, 245, 1);
   -webkit-backdrop-filter: blur(55px);
@@ -340,7 +335,7 @@ footer {
 }
 
 .contact {
-  padding-top: 65px;
+  padding-top: 95px;
   height: auto;
   position: relative;
   background-color: white;
@@ -373,24 +368,42 @@ footer {
   border: 3px solid white;
   box-shadow: 0px 0px 30px rgba(48, 83, 79, 0.3), inset 0px 1px 3px 3px rgba(0, 0, 0, 0.50);
 }
-.profile + .row{
+
+.profile+.row {
   background: white;
 }
-.navigation_profile_wrapper{
+
+.navigation_profile_wrapper {
   margin-top: 15px;
   background: white
 }
-.navigation_profile{
+
+.navigation_profile {
   list-style: none;
   -webkit-padding-start: 0px;
   padding-block-start: 0px;
+  padding-left: 0px;
 }
-.navigation_profile li{
-  display: inline;
-  padding:15px;
+
+.navigation_profile li {
+  display: inline-block;
+  margin: -2px;
+  padding: 0;
+}
+
+.navigation_profile label {
+  padding: 15px;
   font-size: 1.1em;
   color: #30534F;
+  height: inherit;
+  border-bottom: 2px solid #C5C5C5;
+  transition: all 0.3s
 }
+
+.navigation_profile label:hover {
+  cursor: pointer;
+}
+
 .hi {
   color: #30534F;
   font-size: 24px;
@@ -402,16 +415,19 @@ footer {
   padding: 0 50px;
 }
 
-.about input[type="radio"]{
+.about input[type="radio"] {
   display: none !important;
 }
-.about input[type="radio"]+ section{
+
+.about input[type="radio"]+section {
   display: none;
 }
-.about input[type="radio"]:checked + section{
+
+.about input[type="radio"]:checked+section {
   display: block;
   animation: fadeEffect 0.2s ease-in;
 }
+
 .larger {
   margin: 30px;
 }
@@ -422,7 +438,6 @@ footer {
   font-size: 72px;
   margin-bottom: 10px;
 }
-
 
 .flex-grid {
   display: flex;
@@ -436,17 +451,17 @@ footer {
   display: block;
   width: 300px;
   height: 300px;
-  border: 1px solid #74C0B7;
-  box-shadow: 6px 6px 25px 2px rgba(48, 83, 79, 0.4);
+  border: 1px solid #BBBBBB;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.21);
   /*inset 0px 1px 3px 0px rgba(0,0,0,0.50),
               inset 0px 1px 3px 0px rgba(0,0,0,0.50);*/
-  border-radius: 0px;
+  border-radius: 10px;
   margin: 25px auto;
   overflow: hidden;
 }
 
 .web-card img {
-  width: inherit;
+  width: 100%;
   height: inherit;
 }
 
@@ -458,9 +473,9 @@ footer {
   text-align: center;
   position: absolute;
   height: 60px;
-  width: inherit;
-  color: white;
-  background-color: #74C0B7;
+  width: 100%;
+  color: #30534F;
+  background-color: #FFFFFF;
   bottom: -10px;
 }
 
@@ -489,7 +504,7 @@ footer {
   .navigation_side i {
     margin: 5px;
   }
-  .navigation li {
+  .navigation li a{
     padding: 0.7em;
   }
   .navigation {
@@ -544,17 +559,16 @@ footer {
     display: inline;
   }
   .navigation li:first-child.active {
-    border-left: 2px solid transparent !important;
     border-bottom: 4px solid white !important;
   }
   .active {
-    border-left: 2px solid transparent !important;
     border-bottom: 4px solid #30534F !important;
   }
   .navigation_top {
-    width: 450px;
+    width: 376px;
     height: 40px;
     display: block;
+    visibility: visible;
     margin: auto;
     padding-top: 35px;
     z-index: 100;
@@ -580,12 +594,26 @@ footer {
   .open {
     transform: translateX(-110px);
   }
+  .social_buttons {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.2em;
+  }
+  .social_buttons a {
+    padding: 5px;
+    color: #30534F;
+  }
   .landing {
     padding: 2em;
     align-items: center;
   }
   .landing h1 {
     font-size: 3em;
+  }
+  .about {
+    padding-top: 40px;
   }
   .skills>div {
     margin: 10px 0;

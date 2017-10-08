@@ -4,15 +4,18 @@ $(document).ready(function () {
 
   $(".navigation_trigger").on("click", function () {
     $(".navigation_side").toggleClass("open");
-    $("header.landing, main, footer").toggleClass("open");
+    //$("header.landing, main, footer").toggleClass("open");
   });
 
-  $(".navigation li").on("click", function (event) {
-    $(".navigation li").not(this).removeClass("active");
+  $(".navigation_top .navigation li").on("click", function (event) {
+    $(".navigation_top .navigation li").not(this).removeClass("active");
     $(this).addClass("active");
-
+  });
+  $(".navigation_side .navigation li").on("click", function(e){
+    setTimeout(function(){
+      $(".navigation_side").removeClass("open");
+    }, 80)
   })
-
   $(".corner_button, .corner_exit").on("click", function () {
     if (inittrue) {
       $(".navigation_top, .landing, main, footer").fadeToggle(0);
@@ -24,22 +27,19 @@ $(document).ready(function () {
       $(".corner_codepen").fadeToggle();
       //  $(".blurrer").addClass("toggleblur");
       inittrue = true;
-    }
+    };
   });
 
 
   $(window).on("scroll", function (event) {
-    fader()
-  })
-
-
-
+    fader();
+  });
 
 
   function fader() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       $(".navigation_wrapper").css("height", "60px");
-      $(".navigation_trigger").css("top", "5px");
+      $(".navigation_trigger").css("top", "0px");
       $(".navigation_top").css("padding-top", "0px");
       $(".main-logo").css({
         "transform": "scale(0.5)",

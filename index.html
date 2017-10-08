@@ -11,9 +11,9 @@
   <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
   <link rel="stylesheet" type="text/css" href="laptop.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script>
+  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script-->
 </head>
 
 <body>
@@ -31,11 +31,17 @@
           <li><a href="#stuff" onclick="openPage(event, 'contact')">Contact</a></li>
         </ul>
       </nav>
+      <nav class="social_buttons">
+        <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
+        <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
+        <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
+      </nav>
     </header>
   </header>
   <nav class="navigation_side">
     <ul class="navigation">
-      <li class="active"><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i>Home</a></li>
+      <li><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i>Home</a></li>
       <li><a href="#aboutME" onclick="openPage(event, 'about')"><i class="fa fa-info"></i>About</a></li>
       <li><a href="#stuff" onclick="openPage(event, 'portfolio')"><i class="fa fa-th"></i>Projects</a></li>
       <li><a href="#stuff" onclick="openPage(event, 'contact')"><i class="fa fa-phone"></i>Contact</a></li>
@@ -279,7 +285,7 @@
         <h1>Meet Sipho. He builds the web.</h1>
         <br>
         <h2>He's a web <span style="text-decoration: line-through">designer</span> developer</h2>
-        <h3>The Front End Web</h3>
+        <h4>The Front End Web</h4>
       </div>
       <div class="row">
         <div class="col-xs-6" style="text-align: right">
@@ -351,7 +357,6 @@
       </section>
       <input id="skills" type="radio" name="abouters">
       <section class="skill">
-
         <div class="container">
           <div class="row text-center larger skills">
             <div class="col-sm-4">
@@ -384,12 +389,13 @@
               </div>
             </div>
           </div>
-        </div></section>
+        </div>
+      </section>
       
       
         <section class="education">
         Loren ipsun
-      </section>
+        </section>
       <!--input id="education" type="radio" name="abouters">
       <section class="education"-->
       </section>
@@ -402,8 +408,7 @@
         <a class="web-card" href="#"><img src="Weather.png"><p class="caption">Local Weather Service</p></a>
         <a class="web-card" href="#"><img src="Calculator.png"><p class="caption">Javascript Calculator</p></a>
         <a class="web-card" href="#"><img src="#"><p class="caption">Random Quote Generator</p></a>
-        <a class="web-card" href="#"><img scr="#"><p class="caption">Javascript Calculator</p></a>
-        <a class="web-card" href="#"><img scr="#"><p class="caption">Tic tac toe</p></a>
+        <a class="web-card" href="#"><img src="#"><p class="caption">Tic tac toe</p></a>
       </div>
     </section>
     <a name="phone"></a>
@@ -501,16 +506,44 @@
       //evt.currentTarget.className += " active";
     }
 
-    var navProf = document.querySelectorAll(".navigation_profile li");
+    var navProf = document.querySelectorAll(".navigation_profile li label");
     navProf[0].classList.add("active");
-    navProf.forEach(function (val) {
-      val.addEventListener("click", function (event) {
-        navProf.forEach(function (iter) {
-          if (iter.classList.contains("active")) iter.classList.remove("active");
-        });
-        val.classList.add("active");
+    for (var i = 0, max = navProf.length; i < max; i++) {
+      navProf[i].addEventListener("click", function (event) {
+        for (var j = 0; j < navProf.length; j++) {
+          if (navProf[j].classList.contains("active")) navProf[j].classList.remove("active");
+        };
+        event.target.classList.add("active");
       })
-    }, false);
+    };
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+      "November", "December"
+    ];
+    var time = document.querySelectorAll(".time");
+    var currDate = new Date();
+    x = setInterval(function () {
+      currDate = new Date();
+    }, 1000);
+    var date = document.querySelectorAll(".date");
+
+    function clockUpdater() {
+      for (var k = 0; k < time.length; k++) {
+        var mins = function () {
+          if (currDate.getMinutes() < 10) {
+            return "0" + currDate.getMinutes()
+          } else {
+            return currDate.getMinutes()
+          }
+        }
+        time[k].innerHTML = currDate.getHours() + ":" + mins();
+      };
+      for (var l = 0; l < date.length; l++) {
+        date[l].innerHTML = days[currDate.getDay()] + ", " + currDate.getDate() + " " + months[currDate.getMonth()];
+      };
+    };
+    clockUpdater();
+    y = setInterval(clockUpdater, 60000)
   </script>
 </body>
 
