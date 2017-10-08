@@ -11,11 +11,15 @@ $(document).ready(function () {
     $(".navigation_top .navigation li").not(this).removeClass("active");
     $(this).addClass("active");
   });
+<<<<<<< HEAD
   $(".navigation_side .navigation li").on("click", function(e){
     setTimeout(function(){
       $(".navigation_side").removeClass("open");
     }, 80)
   })
+=======
+
+>>>>>>> lets-experiment
   $(".corner_button, .corner_exit").on("click", function () {
     if (inittrue) {
       $(".navigation_top, .landing, main, footer").fadeToggle(0);
