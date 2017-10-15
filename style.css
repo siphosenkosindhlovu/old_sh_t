@@ -60,11 +60,9 @@ body {
   width: 100%;
   /*background-color: #30534F;*/
   transition: all 0.4s;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);
-  -webkit-backdrop-filter: blur(55px);
-  backdrop-filter: blur(55px);
-  z-index: 10000000000000
+  background: rgba(255, 255, 255, 0);
+  /*box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);*/
+  -webkit-backdrop-filter: blur(55px);  z-index: 10000000000000
 }
 
 .navigation_header {
@@ -133,9 +131,11 @@ body {
 .tab {
   display: none;
 }
-.navigation_top{
+
+.navigation_top {
   visibility: hidden;
 }
+
 .navigation {
   list-style-type: none;
   position: absolute;
@@ -318,29 +318,26 @@ footer {
 }
 
 .about {
-  padding-top: 50px;
+  padding-top: 80px;
   margin: 0;
   position: relative;
   background: white;
   -webkit-backdrop-filter: blur(55px);
-  backdrop-filter: blur(55px);
 }
 
 .portfolio {
-  padding-top: 95px;
+  padding-top: 100px;
   position: relative;
   background-color: rgba(245, 245, 245, 1);
   -webkit-backdrop-filter: blur(55px);
-  backdrop-filter: blur(55px);
 }
 
 .contact {
-  padding-top: 95px;
+  padding-top: 100px;
   height: auto;
   position: relative;
   background-color: white;
   -webkit-backdrop-filter: blur(55px);
-  backdrop-filter: blur(55px);
 }
 
 .call-grp {
@@ -487,13 +484,9 @@ footer {
   text-align: center;
   padding: 50px;
   -webkit-backdrop-filter: blur(55px);
-  backdrop-filter: blur(55px);
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  body {
-    padding-top: 60px;
-  }
   .not_mobile {
     display: inline;
   }
@@ -504,7 +497,7 @@ footer {
   .navigation_side i {
     margin: 5px;
   }
-  .navigation li a{
+  .navigation li a {
     padding: 0.7em;
   }
   .navigation {
@@ -549,9 +542,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-  body {
-    padding-top: 60px;
-  }
   .blurrer {
     position: fixed;
   }
@@ -570,7 +560,7 @@ footer {
     display: block;
     visibility: visible;
     margin: auto;
-    padding-top: 35px;
+    padding-top: 0px;
     z-index: 100;
     transition: all 0.3s;
   }
@@ -580,6 +570,7 @@ footer {
   .navigation li a {
     font-weight: 100 !important;
     font-size: 0.9em;
+    color: white;
   }
   .navigation_trigger {
     display: none;
@@ -613,7 +604,7 @@ footer {
     font-size: 3em;
   }
   .about {
-    padding-top: 40px;
+    padding-top: 60px;
   }
   .skills>div {
     margin: 10px 0;

@@ -503,6 +503,10 @@
       // Show the current tab, and add an "active" class to the link that opened the tab
       document.getElementById(pageName).style.display = "block";
       if (pageName == "about") $("#brief").css("display", "block");
+      if (pageName == "landing")
+        $(".navigation_top .navigation li a").css("color", "white");
+      else
+        $(".navigation_top .navigation li a").css("color", "#30534F;");
       //evt.currentTarget.className += " active";
     }
 
