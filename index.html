@@ -19,7 +19,34 @@
 <body>
   <header class="navigation_wrapper">
     <header class="navigation_header">
-      <h2 class="main-logo"></h2>
+      <div class="contact_chip">
+        <span class="close-btn"><i class="fa fa-close"></i></span>
+        <div class="contact_img">
+          <span class="nip"><i class="fa fa-envelope"></i></span>
+        </div>
+        <span class="contact_name">
+          Sipho<span class="not_mobile">senkosi Ndhlovu</span>
+        </span>
+        <div class="contact_chip--open">
+          <div class="contact_social">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-skype"></i>
+          </div>
+          <form id="quickEmail" class="contact_email" name="quick-email">
+            <label for="email">Your email</label>
+            <br>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="message">Your message</label>
+            <br>
+            <input type="text" id="message" name="message">
+            <br>
+            <button class="btn btn-primary" type="submit">Send quick message</button>
+          </form>
+        </div>
+      </div>
       <a class="navigation_trigger">
         ☰
       </a>
@@ -28,7 +55,6 @@
           <li class="active"><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i></a></li>
           <li><a href="#aboutME" onclick="openPage(event, 'about')">About</a></li>
           <li><a href="#stuff" onclick="openPage(event, 'portfolio')">Projects</a></li>
-          <li><a href="#stuff" onclick="openPage(event, 'contact')">Contact</a></li>
         </ul>
       </nav>
       <nav class="social_buttons">

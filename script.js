@@ -34,29 +34,20 @@ $(document).ready(function () {
 
 
   $(window).on("scroll", function (event) {
-    fader();
+   // fader();
   });
 
 
   function fader() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       $(".navigation_wrapper").css("height", "60px");
-      $(".navigation_trigger").css("top", "0px");
+     // $(".navigation_trigger").css("top", "0px");
      // $(".navigation_top").css("padding-top", "0px");
-      $(".main-logo").css({
-        "transform": "scale(0.5)",
-        "left": "-35px",
-        "margin-top": "-30px"
-      });
     } else {
-      $(".navigation_wrapper").css("height", "100px");
-      $(".navigation_trigger").css("top", "20px");
+     // $(".navigation_wrapper").css("height", "100px");
+      //$(".navigation_trigger").css("top", "20px");
       //$(".navigation_top").css("padding-top", "35px");
-      $(".main-logo").css({
-        "transform": "scale(1)",
-        "left": "-15px",
-        "margin-top": "-15px"
-      });
+
     };
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
       //document.querySelector(".blurrer").style.position = "absolute";

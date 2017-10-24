@@ -1,6 +1,8 @@
 .everything_wrapper {
   width: auto;
   position: relative;
+  /* Rectangle 5: *//* Rectangle 5: */
+  background: radial-gradient(0% 101%, #008AFF 0%, #008AFF 37%, rgba(58,157,239,0.78) 39%, rgba(8,144,248,0.57) 62%, rgba(127,180,220,0.53) 100%);
 }
 
 .everything_wrapper * {
