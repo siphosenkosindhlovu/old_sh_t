@@ -33,7 +33,7 @@ body {
   margin-top: 0px;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   z-index: -10000;
   transition: all 0.2s;
@@ -54,7 +54,7 @@ body {
 
 .navigation_wrapper {
   padding: 1em;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 100px;
   width: 100%;
@@ -76,6 +76,13 @@ body {
   color: white;
   font-weight: 100;
 }
+.navigation_top,
+.social_buttons,
+.close-btn,
+.not_mobile,
+.tab {
+  display: none;
+}
 
 .contact_chip{
   width: 150px;
@@ -85,6 +92,12 @@ body {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.50);
   border-radius: 100px;
   color: black;
+  transition: all 0.3s;
+}
+.close-btn{
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 .contact_img{
   position: absolute;
@@ -94,10 +107,12 @@ body {
   background-size: cover;
   width: 60px;
   height: 60px;
+  transition: all 0.5s;
   border-radius: 50%;
   border: 5px solid #FFFFFF;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
 }
+
 .nip{
   background: #FFFFFF;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
@@ -116,19 +131,83 @@ body {
   position: absolute;
   left: 70px;
   top: 18px;
-  font-family: HelveticaNeue;
+  transition: all 0.5s;
+  font-weight: 300 !important;
   font-size: 18px;
   color: #0059A6;
   text-shadow: 0 2px 4px rgba(102, 173, 197, 0.5);
 }
-.contact_chip--open{
+.hided{
   display: none;
 }
-
-
+.contact_chip--open .close-btn{
+  display: block;
+}
+.contact_chip--open{
+  width: 270px;
+  height: 485px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;/* Rectangle 7: */
+  background: #F9F9F9;
+  border-radius: 10px;
+}
+.contact_chip--open .nip{
+  display: none;
+}
+.contact_chip--open .contact_img{
+  right: 0;
+  width: 70px;
+  height: 70px;
+  top: 25px;
+  margin: auto;
+}
+.contact_chip--open .contact_name{
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.contact_chip--open .not_mobile{
+  display: inline-block;
+}
+.contact_chip--open .hided{
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 185px;
+}
+.contact_social{
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.contact_email{
+  color: #0059A6;
+}
+.contact_email label{
+  font-weight: 400;
+}
+.contact_email input{
+  width: 100%;
+  /* Rectangle 10: */
+  background: #F9F9F9;
+  border: 1px solid rgba(0,89,166,0.34);
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.23);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.contact_email input[type=text]{
+  height: 100px;
+}
 .navigation_trigger {
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 5px;
   display: inline;
   font-size: 24px;
@@ -136,8 +215,9 @@ body {
   padding: 0;
   background: transparent;
   border: none;
-  color: black;
+  color: white;
   transition: all 0.4s;
+  z-index: 1;
 }
 
 .main-logo {
@@ -170,14 +250,6 @@ body {
   -webkit-backdrop-filter: blur(75px);
 }
 
-.navigation_top,
-.social_buttons,
-.close-btn,
-.not_mobile,
-.tab {
-  display: none;
-}
-
 .navigation_top {
   visibility: hidden;
 }
@@ -203,7 +275,7 @@ body {
 }
 
 .navigation li a {
-  color: #30534F;
+  color: #0059A6;
   font-weight: 200;
   letter-spacing: 1px;
   display: block;
@@ -536,6 +608,10 @@ footer {
   .not_mobile {
     display: inline;
   }
+
+  .contact_chip{
+    width: 270px
+  }
   .navigation_side {
     right: -205px;
     width: 205px;
@@ -594,6 +670,24 @@ footer {
   .not_mobile {
     display: inline;
   }
+  .contact_chip{
+    width: 270px;
+    float: right;
+  }
+  .contact_img{
+    left: auto;
+    right: 0;
+  }
+  .contact_chip--open {
+    left: auto;
+    right: 15px;
+  }
+  .contact_chip--open .contact_img{
+    left: 0;
+  }
+  .contact_name{
+    left: 30px;
+  }
   .navigation li:first-child.active {
     border-bottom: 4px solid white !important;
   }
@@ -605,7 +699,7 @@ footer {
     height: 40px;
     display: block;
     visibility: visible;
-    margin: auto;
+    margin-left: 25px;
     padding-top: 0px;
     z-index: 100;
     transition: all 0.3s;
@@ -615,7 +709,7 @@ footer {
   }
   .navigation li a {
     font-weight: 100 !important;
-    font-size: 0.9em;
+    font-size: 20px;
     color: white;
   }
   .navigation_trigger {

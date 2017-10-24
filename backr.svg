@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="316px" height="900px" viewBox="0 0 316 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="0%" fx="0%" fy="0%" r="142.94435%" id="radialGradient-1">
+            <stop stop-color="#008AFF" offset="0%"></stop>
+            <stop stop-color="#008AFF" offset="37.1310203%"></stop>
+            <stop stop-color="#3B9EF0" stop-opacity="0.782837142" offset="39.0271739%"></stop>
+            <stop stop-color="#0891F9" stop-opacity="0.570304265" offset="62.3164036%"></stop>
+            <stop stop-color="#7FB5DD" stop-opacity="0.53" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="262" y="34" width="757" height="902"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="757" height="902" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-4.000000, 0.000000)" stroke="#979797" stroke-width="2" fill="url(#radialGradient-1)">
+            <g id="Background" transform="translate(-258.000000, -36.000000)">
+                <use id="Rectangle-5" mask="url(#mask-3)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

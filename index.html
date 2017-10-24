@@ -24,11 +24,11 @@
         <div class="contact_img">
           <span class="nip"><i class="fa fa-envelope"></i></span>
         </div>
-        <span class="contact_name">
+        <div class="contact_name">
           Sipho<span class="not_mobile">senkosi Ndhlovu</span>
-        </span>
-        <div class="contact_chip--open">
-          <div class="contact_social">
+        </div>
+        <div class="hided">
+          <div class="contact_social flex-grid">
             <i class="fa fa-instagram"></i>
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
@@ -37,7 +37,7 @@
           <form id="quickEmail" class="contact_email" name="quick-email">
             <label for="email">Your email</label>
             <br>
-            <input type="text" id="email" name="email">
+            <input type="email" id="email" name="email">
             <br>
             <label for="message">Your message</label>
             <br>
@@ -57,12 +57,6 @@
           <li><a href="#stuff" onclick="openPage(event, 'portfolio')">Projects</a></li>
         </ul>
       </nav>
-      <nav class="social_buttons">
-        <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
-        <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
-        <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
-        <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
-      </nav>
     </header>
   </header>
   <nav class="navigation_side">
@@ -70,7 +64,6 @@
       <li><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i>Home</a></li>
       <li><a href="#aboutME" onclick="openPage(event, 'about')"><i class="fa fa-info"></i>About</a></li>
       <li><a href="#stuff" onclick="openPage(event, 'portfolio')"><i class="fa fa-th"></i>Projects</a></li>
-      <li><a href="#stuff" onclick="openPage(event, 'contact')"><i class="fa fa-phone"></i>Contact</a></li>
     </ul>
   </nav>
   <div class="blurrer">
@@ -509,6 +502,12 @@
   <!--script src="mountains.js"></script-->
   <script src="script.js"></script>
   <script>
+    $(".contact_img").click(function(e){
+      $(".contact_chip").toggleClass("contact_chip--open")
+    });
+    $(".close-btn").click(function(e){
+      $(".contact_chip").removeClass("contact_chip--open")
+    })
     function openPage(evt, pageName) {
       // Declare all variables
       var i, tabcontent, tablinks;
