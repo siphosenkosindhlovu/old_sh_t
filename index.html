@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet Sipho</title>
-  <link rel="stylesheet" type="text/css" href="mountains.css">
+  <!--link rel="stylesheet" type="text/css" href="mountains.css"-->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
@@ -20,9 +20,11 @@
   <header class="navigation_wrapper">
     <header class="navigation_header">
       <div class="contact_chip">
+        <div class="blurred-backdrop">
+        </div>
         <span class="close-btn"><i class="fa fa-close"></i></span>
         <div class="contact_img">
-          <span class="nip"><i class="fa fa-envelope"></i></span>
+          <!--span class="nip"><i class="fa fa-envelope"></i></span-->
         </div>
         <div class="contact_name">
           Sipho<span class="not_mobile">senkosi Ndhlovu</span>
@@ -298,33 +300,34 @@
       </div>
     </div>
   </div>
-  <header id="landing" class="tab container-fluid landing center-block">
+  <header id="landing" style="display:block" class="tab container-fluid landing">
     <div class="container">
       <div class="row">
-        <h1>Meet Sipho. He builds the web.</h1>
+        <h1>Hello.</h1>
         <br>
+        <h2>Meet Sipho. He builds the web</h2>
         <h2>He's a web <span style="text-decoration: line-through">designer</span> developer</h2>
         <h4>The Front End Web</h4>
       </div>
       <div class="row">
         <div class="col-xs-6" style="text-align: right">
           <div class="landing_buttons">
-            <a href="#aboutME" onclick="openPage(event, 'about')">About <i class="fa fa-arrow-circle-right fa-lg"></i></a>
+            <a href="#aboutME" onclick="openPage(event, 'about')">Learn More </a>
           </div>
         </div>
         <div class="col-xs-6" style="text-align: left">
           <div class="landing_buttons">
-            <a href="#aboutME" onclick="openPage(event, 'portfolio')">Work <i class="fa fa-arrow-circle-right fa-lg"></i></a>
+            <a href="#aboutME" onclick="openPage(event, 'portfolio')">See his Work </a>
           </div>
         </div>
       </div>
-      <div class="row">
+      <!--div class="row">
         <div class="landing_social">
           <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
           <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
           <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
           <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
-        </div>
+        </div-->
       </div>
       <div class="row">
         <div class="corner_button landing_buttons">
@@ -351,7 +354,7 @@
     <section id="about" class="container-fluid about text-center tab">
       <h2 class="heading">About</h2>
       <figure class="profile">
-        <img src="profile.jpg">
+        <img id="pp" src="profile.jpg">
       </figure>
       <div class="row">
         <nav class="navigation_profile_wrapper">
@@ -431,7 +434,7 @@
       </div>
     </section>
     <a name="phone"></a>
-    <section id="contact" class="container-fluid contact text-center tab">
+    <!--section id="contact" class="container-fluid contact text-center tab">
       <h2 class="heading">Contact Me</h2>
       <div class="container">
         <div class="call-grp row">
@@ -470,7 +473,7 @@
                 <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-3x"></i></a>
               </div>
             </div>
-            <!--div class="col-sm-8">
+            <div class="col-sm-8">
             <form role="form" class="form-horizontal" name="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -488,10 +491,10 @@
         <button type="submit" class="btn btn-danger" style="box-shadow: 2px 2px 5px #5D1C1A">Send</button>
       </div>
       </form>
-      </div-->
+      </div>
 
       </div>
-    </section>
+    </section-->
   </main>
   <footer class="container-fluid footer center-block text-center">
     <p>&copy; 2017 Siphosenkosi Ndhlovu</p>

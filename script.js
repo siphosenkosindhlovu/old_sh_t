@@ -1,7 +1,8 @@
 "use strict";
 $(document).ready(function () {
   var inittrue = true;
-
+  var profile = document.querySelector("#pp").src;
+  console.log(profile);
   $(".navigation_trigger").on("click", function () {
     $(".navigation_side").toggleClass("open");
     //$("header.landing, main, footer").toggleClass("open");

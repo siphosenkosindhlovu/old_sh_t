@@ -62,7 +62,8 @@ body {
   transition: all 0.4s;
   background: rgba(255, 255, 255, 0);
   /*box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);*/
-  -webkit-backdrop-filter: blur(55px);  z-index: 10000000000000
+  /*-webkit-backdrop-filter: blur(55px); */
+  z-index: 10000000000000
 }
 
 .navigation_header {
@@ -93,6 +94,17 @@ body {
   border-radius: 100px;
   color: black;
   transition: all 0.3s;
+  overflow: hidden;
+}
+.blurred-backdrop{
+  position: absolute;
+  width: 300px;
+  height: 160px;
+  left: -15px;
+  background: url("profile.jpg");
+  background-size: cover;
+  filter: blur(15px);
+  visibility: hidden;
 }
 .close-btn{
   position: absolute;
@@ -164,12 +176,16 @@ body {
   top: 25px;
   margin: auto;
 }
+.contact_chip--open .blurred-backdrop{
+  visibility: visible;
+}
 .contact_chip--open .contact_name{
   top: 120px;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center;
+  color: white;
 }
 .contact_chip--open .not_mobile{
   display: inline-block;
@@ -182,6 +198,18 @@ body {
   right: 0;
   margin: auto;
   width: 185px;
+}
+.fa-instagram{
+  color: #E77B58;
+}
+.fa-facebook{
+  color: #1E4D9F;
+}
+.fa-twitter{
+  color: #42B6FF
+}
+.fa-skype{
+  color: #0CC5FF
 }
 .contact_social{
   font-size: 24px;
@@ -309,14 +337,10 @@ footer {
   height: auto;
   color: white;
   background-color: rgba(20, 15, 0, 0.30);
-  text-align: center;
+  text-align: justify;
   padding: 10%;
   padding-top: 105px !important;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  font-weight: 200;
 }
 
 .landing h1,
@@ -366,6 +390,7 @@ footer {
   color: #30534F;
   padding: 0.5em;
   color: white;
+  text-decoration: underline;
   /*border: 2px solid white;*/
 }
 
@@ -378,7 +403,6 @@ footer {
 
 .heading {
   font-variant: small-caps;
-  font-weight: 400;
   color: #30534F;
   text-shadow: 5px 6px 10px rgba(48, 83, 79, 0.5);
   margin: 25px auto;
