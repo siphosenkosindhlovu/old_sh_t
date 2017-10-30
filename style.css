@@ -58,9 +58,9 @@ body {
   top: 0;
   height: 100px;
   width: 100%;
-  /*background-color: #30534F;*/
   transition: all 0.4s;
   background: rgba(255, 255, 255, 0);
+  background: -webkit-linear-gradient(top, rgba(110, 177, 235, 0.63), transparent);
   /*box-shadow: 0px 0px 15px rgba(32, 68, 43, 0.37);*/
   /*-webkit-backdrop-filter: blur(55px); */
   z-index: 10000000000000
@@ -105,6 +105,19 @@ body {
   background-size: cover;
   filter: blur(15px);
   visibility: hidden;
+}
+#pp{
+  z-index: 5;
+}
+.profile_blurred-backdrop{
+  position: absolute;
+  width: 100vh;
+  height: 160px;
+  top: 0;
+  background: url("profile.jpg");
+  background-size: cover;
+  filter: blur(15px);
+  z-index: 2;
 }
 .close-btn{
   position: absolute;
@@ -337,7 +350,7 @@ footer {
   height: auto;
   color: white;
   background-color: rgba(20, 15, 0, 0.30);
-  text-align: justify;
+  text-align: center;
   padding: 10%;
   padding-top: 105px !important;
   font-weight: 200;
@@ -505,6 +518,7 @@ footer {
   width: 180px;
   border-radius: 50%;
   border: 3px solid white;
+  z-index: 100000;
   box-shadow: 0px 0px 30px rgba(48, 83, 79, 0.3), inset 0px 1px 3px 3px rgba(0, 0, 0, 0.50);
 }
 
