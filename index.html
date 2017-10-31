@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet Sipho</title>
-  <!--link rel="stylesheet" type="text/css" href="mountains.css"-->
-  <!--link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"-->
-  <!--link rel="stylesheet" type="text/css" href="fa/css/font-awesome.css"-->
-  <!--link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css"-->
+  <link rel="stylesheet" type="text/css" href="mountains.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
   <link rel="stylesheet" type="text/css" href="laptop.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script>
+  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script-->
 </head>
 
 <body>
@@ -22,7 +22,7 @@
       <div class="contact_chip">
         <div class="blurred-backdrop">
         </div>
-        <span class="close-btn"><i class="fa fa-close"></i></span>
+        <span class="btn btn-default close-btn"><i class="fa fa-close"></i></span>
         <div class="contact_img">
           <!--span class="nip"><i class="fa fa-envelope"></i></span-->
         </div>
@@ -30,20 +30,29 @@
           Sipho<span class="not_mobile">senkosi Ndhlovu</span>
         </div>
         <div class="hided">
+          <div class="contact-btn flex-grid">
+            <a class="btn btn-default"><i class="fa fa-phone"></i> Call</a>
+            <a class="btn btn-default"><i class="fa fa-envelope"></i> Email</a>
+          </div>
+          <br>
           <div class="contact_social flex-grid">
             <i class="fa fa-instagram"></i>
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
             <i class="fa fa-skype"></i>
+            <i class="fa fa-codepen"></i>
+            <i class="fa fa-github"></i>
+            <i class="fa fa-linkedin"></i>
           </div>
+          <br>
           <form id="quickEmail" class="contact_email" name="quick-email">
-            <label for="email">Your email</label>
+            <label for="email"><span>Your email</span></label>
             <br>
             <input type="email" id="email" name="email">
             <br>
-            <label for="message">Your message</label>
+            <label for="message"><span>Your message</span></label>
             <br>
-            <input type="text" id="message" name="message">
+            <textarea type="text" class="form-control" id="name" placeholder="Say something. Anything :)" rows="8"></textarea>
             <br>
             <button class="btn btn-primary" type="submit">Send quick message</button>
           </form>
@@ -54,7 +63,7 @@
       </a>
       <nav class="navigation_top">
         <ul class="navigation">
-          <li class="active"><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i></a></li>
+          <li><a href="#" onclick="openPage(event, 'landing')"><i class="fa fa-home"></i></a></li>
           <li><a href="#aboutME" onclick="openPage(event, 'about')">About</a></li>
           <li><a href="#stuff" onclick="openPage(event, 'portfolio')">Projects</a></li>
         </ul>
@@ -328,12 +337,12 @@
           <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
           <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
         </div-->
+    </div>
+    <div class="row">
+      <div class="corner_button landing_buttons">
+        <a href="javascript:void(0);"><i class="fa fa-image fa-lg"></i> View Background</a>
       </div>
-      <div class="row">
-        <div class="corner_button landing_buttons">
-          <a href="javascript:void(0);"><i class="fa fa-image fa-lg"></i> View Background</a>
-        </div>
-      </div>
+    </div>
     </div>
 
     <!--div class="col-sm-8 text-left">
@@ -351,16 +360,26 @@
   <main class="container-fluid" style="padding:0">
 
     <a name="aboutME"></a>
-    <section id="about" class="container-fluid about text-center tab">
-      <h2 class="heading">About</h2>
-      <div class="profile_blurred-backdrop">
+    <section id="about" class="container-fluid about tab">
+      <div class="profile">
+        <div class="container-fluid">
+          <div class="col-sm-3 text-center">
+            <img id="pp" src="profile.jpg">
+          </div>
+          <div class="col-sm-9">
+            <h2>Siphosenkosi Ndhlovu</h2>
+            <h3>Front End Developer</h3>
+            <h4>HTML5 | CSS3 | JavaScript</h4>
+            <h4>🇿🇼</h4>
+            <div class="row">
+              <a class="btn btn-primary"><i class="fa fa-download"></i> Download CV</a>
+              <a class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a>
+              <a class="btn btn-default"><i class="fa fa-linkedin"></i> Linked In</a>
+            </div>
+          </div>
         </div>
-      <figure class="profile">
-        <img id="pp" src="profile.jpg">
-        
-        
-      </figure>
-      <div class="row">
+      </div>
+      <!--div class="row text-center">
         <nav class="navigation_profile_wrapper">
           <ul class="navigation_profile">
             <li><label for="brief">Brief</label></li>
@@ -368,62 +387,73 @@
             <li><label for="skills">Skills</li>
           </ul>
         </nav>
-      </div>
-      <br>
-      <br>
-      <br>
-      <input id="brief" type="radio" name="abouters" checked>
-      <section class="brief">
-        <p class="body"><span class="hi">Hello World!</span> I am <b class="hi">Siphosenkosi Ndhlovu</b>, a Front End Developer based in
-          Zimbabwe
-        </p>
-        <p class="body">I am a high school student doing Advanced Level Sciences at St John's High School Emerald Hill. I started coding
-          in 2014 for Cambridge Ordinary Level I.C.T. I have been working with Front End web technologies ever since.</p>
-        <p class="body">At the moment I am doing Front End Development with freeCodeCamp.com</p>
-      </section>
-      <input id="skills" type="radio" name="abouters">
-      <section class="skill">
-        <div class="container">
-          <div class="row text-center larger skills">
-            <div class="col-sm-4">
-              <i class="fa fa-html5 fa-lg"></i>
-              <p>HTML 5</p>
-              <div>
-                <ul>
-                  <li>Geolocation API</li>
-                  <li>Scalable Vector Graphics</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <i class="fa fa-css3 fa-lg"></i>
-              <p>CSS 3</p>
-              <div>
-                <ul>
-                  <li>Bootstrap</li>
-                  <li>Responsive Design</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <span class="js fa-lg">JS</span>
-              <p>JavaScript</p>
-              <div>
-                <ul>
-                  <li>jQuery</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-        <section class="education">
-        Loren ipsun
+      </div-->
+      <div class="container-fluid" style="margin: auto -15px; background: white;"> 
+        <section class="container brief">
+          <br>
+            <h3 class="heading">Brief</h3>
+          <p class="body"><span class="hi">Hello World!</span> I am <b class="hi">Siphosenkosi Ndhlovu</b>, a Front End Developer based in
+           the Sunshine City Harare, Zimbabwe
+          </p>
+          <p class="body">I am a self taught, self motivated Front End Web Devoloper. I have primarily used <a href="http://www.freecodecamp.com">freecodecamp.com</a> and <a href="http://codacademy.com">Codeacademy</a> to learn how to design static websites in HTML, CSS, JavaScript, jQuery and Bootstrap</p>
+          <p class="body">And I am also proficient in the command line(bash) and the git versioning system</p>
+          <p class="body">In addition to web development, I am also a high school student doing the Cambridge Advanced Level Course in science subjects(Math, Physics, Goegraphy and Chemistry)</p> 
         </section>
-      <!--input id="education" type="radio" name="abouters">
-      <section class="education"-->
+        <section class="skill">
+          <div class="container">
+            <h3 class="heading">Skills</h3>
+            <div class="row text-center larger skills">
+              <div class="col-sm-4">
+                <i class="fa fa-html5 fa-lg"></i>
+                <p>HTML 5</p>
+                <div>
+                  <ul>
+                    <li>Geolocation API</li>
+                    <li>Scalable Vector Graphics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <i class="fa fa-css3 fa-lg"></i>
+                <p>CSS 3</p>
+                <div>
+                  <ul>
+                    <li>Bootstrap</li>
+                    <li>Responsive Design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <span class="js fa-lg">JS</span>
+                <p>JavaScript</p>
+                <div>
+                  <ul>
+                    <li>jQuery</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center larger skills">
+                <div class="col-sm-4">
+                  <i class="fa fa-git fa-lg"></i>
+                  <p>Git</p>
+                  <div>
+                    <ul>
+                      <li>git(command line)</li>
+                      <li>GitHub</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <i class="fa fa-terminal fa-lg"></i>
+                  <p>Command Line(bash)</p>
+                </div>
+              </div>
+          </div>
+        </section>
+
+      </div>
+     
       </section>
     </section>
     <a name="stuff"></a>
@@ -498,7 +528,7 @@
       </div>
 
       </div>
-    </section-->
+      </section-->
   </main>
   <footer class="container-fluid footer center-block text-center">
     <p>&copy; 2017 Siphosenkosi Ndhlovu</p>
@@ -509,12 +539,13 @@
   <!--script src="mountains.js"></script-->
   <script src="script.js"></script>
   <script>
-    $(".contact_img").click(function(e){
+    $(".contact_img").click(function (e) {
       $(".contact_chip").toggleClass("contact_chip--open")
     });
-    $(".close-btn").click(function(e){
+    $(".close-btn").click(function (e) {
       $(".contact_chip").removeClass("contact_chip--open")
     })
+
     function openPage(evt, pageName) {
       // Declare all variables
       var i, tabcontent, tablinks;
@@ -535,11 +566,10 @@
       // Show the current tab, and add an "active" class to the link that opened the tab
       document.getElementById(pageName).style.display = "block";
       if (pageName == "about") $("#brief").css("display", "block");
-      if (pageName == "landing")
-        $(".navigation_top .navigation li a").css("color", "white");
+      if (pageName == "portfolio") 
+        $(".navigation_wrapper").css("background-color", "rgba(20, 15, 0, 0.30)");
       else
-        $(".navigation_top .navigation li a").css("color", "#30534F;");
-      //evt.currentTarget.className += " active";
+      $(".navigation_wrapper").css("background-color", "rgba(20, 15, 0, 0.0)")
     }
 
     var navProf = document.querySelectorAll(".navigation_profile li label");

@@ -2,8 +2,8 @@
   width: auto;
   position: relative;
   /* Rectangle 5: *//* Rectangle 5: */
-  background: url(backr.svg);
-  background-size: cover;
+  /*background: url(backr.svg);
+  background-size: cover;*/
 }
 
 .everything_wrapper * {
