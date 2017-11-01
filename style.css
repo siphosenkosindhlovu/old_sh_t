@@ -43,16 +43,17 @@ body {
 }
 
 .tab {
-  min-height: 100vh;
-  -webkit-animation: fadeEffect 0.3s;
-  animation: fadeEffect 0.3s;
+  height: auto;
+  -webkit-animation: fadeEffect 0.6s;
+  animation: fadeEffect 0.6s;
+  animation-delay: -0.3s
 }
 
 .toggleblur {
-  -webkit-filter: blur(35px) brightness(1);
-  -moz-filter: blur(35px) brightness(1);
-  -o-filter: blur(35px) brightness(1);
-  filter: blur(35px) brightness(1);
+  -webkit-filter: blur(55px) brightness(1);
+  -moz-filter: blur(55px) brightness(1);
+  -o-filter: blur(55px) brightness(1);
+  filter: blur(55px) brightness(1);
 }
 
 .navigation_wrapper {
@@ -95,7 +96,8 @@ body {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.50);
   border-radius: 100px;
   color: black;
-  transition: all 0.3s;
+  transition: all 0.5s;
+  transition-delay: -0.3s;
   overflow: hidden;
 }
 
@@ -144,6 +146,7 @@ body {
   width: 60px;
   height: 60px;
   transition: all 0.5s;
+  transition-delay: -0.3s;
   border-radius: 50%;
   border: 0px solid #FFFFFF;
   box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.50), inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
@@ -170,7 +173,7 @@ body {
   left: 70px;
   top: 18px;
   transition: all 0.5s;
-  font-weight: 300 !important;
+  font-weight: lighter;
   font-size: 18px;
   color: #0059A6;
 }
@@ -209,9 +212,9 @@ body {
 
 .contact_chip--open .contact_img {
   right: 0;
-  width: 100px;
-  height: 100px;
-  top: 35px;
+  width: 80px;
+  height: 80px;
+  top: 55px;
   margin: auto;
 }
 
@@ -243,9 +246,11 @@ body {
   max-width: 400px;
   padding: 15px 5%;
 }
-.input [type="text"]:focus{
+
+.input [type="text"]:focus {
   outline: none;
 }
+
 .fa-instagram {
   color: #E77B58;
 }
@@ -339,6 +344,7 @@ body {
   right: -175px;
   width: 175px;
   transition: all 0.4s;
+  transition-delay: -0.2s;
   background-color: white;
   /*background-color: rgba(255, 255, 255, 0.95);*/
   z-index: 10000000000000;
@@ -392,7 +398,7 @@ a:hover {
 header.landing,
 main,
 footer {
-  transition: all 0.4s
+  transition: all 0.4s;
 }
 
 .open {
@@ -400,19 +406,19 @@ footer {
 }
 
 .landing {
-  height: auto;
+  min-height: 100vh;
   color: white;
   background-color: rgba(20, 15, 0, 0.30);
   text-align: center;
   padding: 10%;
   padding-top: 105px !important;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .landing h1,
 .landing h2,
 .landing h3 {
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .landing_social {
@@ -457,6 +463,7 @@ footer {
   padding: 0.5em;
   color: white;
   text-decoration: underline;
+  font-weight: 300;
   /*border: 2px solid white;*/
 }
 
@@ -552,6 +559,11 @@ footer {
   padding-bottom: 100px;
   margin: auto -15px;
   margin-bottom: -45px;
+  text-align: center;
+}
+
+.profile * {
+  font-weight: 100;
 }
 
 .profile img {
@@ -717,7 +729,7 @@ footer {
     width: 400px;
     margin: 20px auto;
   }
-  .profile{
+  .profile {
     text-align: center;
   }
   .landing_social {
@@ -814,6 +826,9 @@ footer {
     top: auto;
     transform: translateY(0);
   }
+  .profile {
+    text-align: justify;
+  }
   .open {
     transform: translateX(-110px);
   }
@@ -835,7 +850,6 @@ footer {
   .landing h1 {
     font-size: 3em;
   }
-  .about {}
   .skills>div {
     margin: 10px 0;
     border-bottom: 0px dashed #ccc
@@ -851,7 +865,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  .landing h1{
+  .landing h1 {
     font-size: 4em;
   }
 }
