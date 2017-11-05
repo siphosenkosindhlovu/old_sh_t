@@ -5,15 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet Sipho</title>
-  <link rel="stylesheet" type="text/css" href="mountains.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
   <link rel="stylesheet" type="text/css" href="laptop.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script-->
+  <script src="https://use.fontawesome.com/7c5d3f9e95.js"></script>
 </head>
 
 <body>
@@ -64,7 +61,7 @@
             </a>
           </div>
           <br>
-          <form id="quickEmail" class="contact_email" name="quick-email">
+         <!--form id="quickEmail" class="contact_email" name="quick-email">
             <label for="email">
               <span>Your email</span>
             </label>
@@ -75,9 +72,26 @@
               <span>Your message</span>
             </label>
             <br>
-            <textarea type="text" class="form-control" id="name" placeholder="Say something. Anything :)" rows="8"></textarea>
+            <textarea type="text" class="form-control" id="name" placeholder="Would love to hear from you" rows="8"></textarea>
             <br>
             <button class="btn btn-primary" type="submit">Send quick message</button>
+          </form-->
+          <form role="form" class="contact_email form-horizontal" name="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name here">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your email here">
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea type="text" class="form-control" id="name" placeholder="Say something. Anything :)" rows="8"></textarea>
+            </div>
+            <div class="form-group text-right">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
           </form>
         </div>
       </div>
@@ -101,22 +115,6 @@
       </nav>
     </header>
   </header>
-  <nav class="navigation_side">
-    <ul class="navigation">
-      <li>
-        <a href="#" onclick="openPage(event, 'landing')">
-          <i class="fa fa-home"></i>Home</a>
-      </li>
-      <li>
-        <a href="#aboutME" onclick="openPage(event, 'about')">
-          <i class="fa fa-info"></i>About</a>
-      </li>
-      <li>
-        <a href="#stuff" onclick="openPage(event, 'portfolio')">
-          <i class="fa fa-th"></i>Projects</a>
-      </li>
-    </ul>
-  </nav>
   <div class="blurrer">
     <!--div class="frame">
       <div class="weather_frame">
@@ -441,30 +439,31 @@
       <div class="row">
         <h1>Hello.</h1>
         <br>
-        <h2>Meet Sipho. He builds the web</h2>
-        <h2>He's a web
-          <span style="text-decoration: line-through">designer</span> developer</h2>
-        <h4>The Front End Web</h4>
+        <h1>I am Sipho. And I build the web./</h1>
+        <h2>The Front End Web</h2>
       </div>
-      <div class="row">
-        <div class="col-xs-6" style="text-align: right">
-          <div class="landing_buttons">
-            <a href="#aboutME" onclick="openPage(event, 'about')">Learn More </a>
-          </div>
-        </div>
-        <div class="col-xs-6" style="text-align: left">
-          <div class="landing_buttons">
-            <a href="#aboutME" onclick="openPage(event, 'portfolio')">See his Work </a>
-          </div>
-        </div>
+      <div class="row landing_buttons">
+        <a href="#" onclick="openPage(event, 'about')">Learn More </a>
+        <a href="#" onclick="openPage(event, 'portfolio')">See my work </a>
+        <a href="#" onclick="$('.contact_chip').addClass('contact_chip--open')">Contact Me </a>
       </div>
-      <!--div class="row">
-        <div class="landing_social">
-          <a href="http://instagram.com/usiphoe_"><i class="fa fa-instagram fa-lg"></i></a>
-          <a href="http://twitter.com/sipho.ndhlovu9"><i class="fa fa-twitter fa-lg"></i></a>
-          <a href="http://github.com/siphosenkosindhlovu"><i class="fa fa-github fa-lg"></i></a>
-          <a href="http://codepen.io/siphosenkosindhlovu"><i class="fa fa-codepen fa-lg"></i></a>
-        </div-->
+    </div>
+    </div>
+    <div class="row">
+      <div class="landing_social">
+        <a href="http://instagram.com/usiphoe_">
+          <i class="fa fa-instagram fa-lg"></i>
+        </a>
+        <a href="http://twitter.com/sipho.ndhlovu9">
+          <i class="fa fa-twitter fa-lg"></i>
+        </a>
+        <a href="http://github.com/siphosenkosindhlovu">
+          <i class="fa fa-github fa-lg"></i>
+        </a>
+        <a href="http://codepen.io/siphosenkosindhlovu">
+          <i class="fa fa-codepen fa-lg"></i>
+        </a>
+      </div>
     </div>
     <div class="row">
       <div class="corner_button landing_buttons">
@@ -501,13 +500,13 @@
               <h3>Front End Developer</h3>
               <h4>HTML5 | CSS3 | JavaScript</h4>
               <h4>🇿🇼</h4>
-              <div class="row">
-                <a class="btn btn-primary">
-                  <i class="fa fa-download"></i> Download CV</a>
-                <a href="http://www.facebook.com/siphosenkosimndhlovu" class="btn btn-default">
-                  <i class="fa fa-facebook"></i> Facebook</a>
-                <a class="btn btn-default">
-                  <i class="fa fa-linkedin"></i> Linked In</a>
+              <div class="row landing_buttons">
+                <a href="#" class="">
+                  Upwork</a>
+                <a href="http://www.facebook.com/siphosenkosimndhlovu">
+                  Facebook</a>
+                <a href="#" class="">
+                  Linked In</a>
               </div>
             </div>
           </div>
@@ -522,10 +521,10 @@
           </ul>
         </nav>
       </div-->
-      <div class="container-fluid" style="margin: auto -15px; background: white;">
+      <div class="container-fluid" style="margin: auto -15px; background: rgba(255,255,255, 0.8);">
         <section class="container brief">
           <br>
-          <h3 class="heading">Brief</h3>
+          <h1 class="heading">About Me</h1>
           <p class="body">
             <span class="hi">Hello World!</span> I am
             <b class="hi">Siphosenkosi Ndhlovu</b>, a Front End Developer based in the Sunshine City Harare, Zimbabwe
@@ -539,7 +538,10 @@
         </section>
         <section class="skill">
           <div class="container">
-            <h3 class="heading">Skills</h3>
+            <h1 class="heading">Skills</h1>
+            <div>
+              I mostly do front end static websites. While I can do a bit of design work, I specialise in the coding part of it.
+            </div>
             <div class="row text-center larger skills">
               <div class="col-sm-4">
                 <i class="fa fa-html5 fa-lg"></i>
@@ -596,7 +598,7 @@
     </section>
     <a name="stuff"></a>
     <section id="portfolio" class="container-fluid portfolio text-center tab">
-      <h2 class="heading text-center">Portfolio</h2>
+      <h2 class="heading text-center">Projects</h2>
       <div class="container flex-grid">
         <a class="web-card" href="#">
           <img src="Wikipedia.png">
@@ -615,8 +617,8 @@
           <p class="caption">Random Quote Generator</p>
         </a>
         <a class="web-card" href="#">
-          <img src="#">
-          <p class="caption">Tic tac toe</p>
+          <img src="pomodoro.png">
+          <p class="caption">Pomodoro Clock</p>
         </a>
       </div>
     </section>
@@ -695,6 +697,9 @@
     $(".contact_img").click(function (e) {
       $(".contact_chip").toggleClass("contact_chip--open")
     });
+    $(".close-btn").click(function (e) {
+      $(".contact_chip").removeClass("contact_chip--open")
+    })
     $(".close-btn").click(function (e) {
       $(".contact_chip").removeClass("contact_chip--open")
     })

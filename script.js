@@ -4,8 +4,8 @@ $(document).ready(function () {
   var profile = document.querySelector("#pp").src;
   console.log(profile);
   $(".navigation_trigger").on("click", function () {
-    $(".navigation_side").toggleClass("open");
-    //$("header.landing, main, footer").toggleClass("open");
+    $(".navigation_top").toggleClass("open");
+    $(".contact_chip").fadeToggle("fast");
   });
 
   $(".navigation_top .navigation li").on("click", function (event) {
@@ -13,9 +13,11 @@ $(document).ready(function () {
     //$(this).addClass("active");
   });
 
-  $(".navigation_side .navigation li").on("click", function(e){
+  $(".navigation_top .navigation li").on("click", function(e){
     setTimeout(function(){
-      $(".navigation_side").removeClass("open");
+      $(".navigation_top").removeClass("open");
+
+      $(".contact_chip").fadeToggle("fast");
     }, 80)
   })
 
